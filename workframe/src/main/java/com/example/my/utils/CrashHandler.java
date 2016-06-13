@@ -11,8 +11,9 @@ import android.content.Intent;
 import android.os.Looper;
 
 
-import com.example.my.mvp.view.activity.MainActivity;
 import com.example.my.mvp.base.BaseApplication;
+
+import io.rong.imkit.MainActivity;
 
 import static android.support.v7.app.AlertDialog.*;
 

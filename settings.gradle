@@ -1,1 +1,1 @@
-include ':workframe', ':utils', ':IMKit'
+include ':workframe', ':utils', ':IMKit', ':javabean'

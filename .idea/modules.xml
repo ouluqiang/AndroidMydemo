@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidMydemo.iml" filepath="$PROJECT_DIR$/AndroidMydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javabean/javabean.iml" filepath="$PROJECT_DIR$/javabean/javabean.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
       <module fileurl="file://$PROJECT_DIR$/workframe/workframe.iml" filepath="$PROJECT_DIR$/workframe/workframe.iml" />
     </modules>

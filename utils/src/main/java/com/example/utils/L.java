@@ -11,7 +11,7 @@ import android.util.Log;
 public class L {
 
 	private static boolean isLog = true;
-	private static final String DEFAULT_TAG = "Debug";
+	private static final String DEFAULT_TAG = "test";
 
 	/**
 	 * 调试信息打印

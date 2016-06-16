@@ -1,0 +1,7 @@
+<resources>
+    <string name="username_isnull">用户名不能为空</string>
+    <string name="userpass_isnull">密码不能为空</string>
+    <string name="nickname_isnull">昵称不能为空</string>
+    <string name="mobile_isnull">昵称不能为空</string>
+    <string name="userpass_isequest">2次输入的密码不一致</string>
+</resources>

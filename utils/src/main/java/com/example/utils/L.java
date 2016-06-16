@@ -98,13 +98,13 @@ public class L {
 	}
 
 	/**
-	 * 信息打印(默认打印标记：Debug 默认打印类型：Log.DEBUG)
+	 * 信息打印(默认打印标记：Debug 默认打印类型：Log.INFO)
 	 *
 	 * @param msg
 	 *            (打印内容)
 	 */
 	public static void log(String msg) {
-		log(DEFAULT_TAG, Log.DEBUG, msg);
+		log(DEFAULT_TAG, Log.INFO, msg);
 	}
 
 	/**

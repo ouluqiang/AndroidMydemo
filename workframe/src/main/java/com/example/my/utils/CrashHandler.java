@@ -11,9 +11,9 @@ import android.content.Intent;
 import android.os.Looper;
 
 
+import com.example.my.mvp.base.BaseActivity;
 import com.example.my.mvp.base.BaseApplication;
 
-import io.rong.imkit.MainActivity;
 
 import static android.support.v7.app.AlertDialog.*;
 
@@ -128,7 +128,7 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
     private void reStart() {
         Intent intent = new Intent(application.getApplicationContext(),
-                MainActivity.class);
+                BaseActivity.class);
         PendingIntent restartIntent = PendingIntent.getActivity(
                 application.getApplicationContext(), 0, intent,
                 Intent.FLAG_ACTIVITY_NEW_TASK);

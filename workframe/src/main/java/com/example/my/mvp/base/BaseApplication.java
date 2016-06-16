@@ -6,7 +6,6 @@ import android.os.Process;
 
 
 import com.example.my.http.ImageManager;
-import com.example.my.imkit.RongCloud;
 import com.example.my.utils.CrashHandler;
 
 import java.util.LinkedList;
@@ -28,8 +27,7 @@ public class BaseApplication extends Application {
         Thread.setDefaultUncaughtExceptionHandler(mCrashHandler);
         activityList = new LinkedList<Activity>();
         ImageManager.getInstace().init(this);
-        //融云
-        RongCloud.onRongIM(this);
+
     }
 
     public static BaseApplication getInstance() {

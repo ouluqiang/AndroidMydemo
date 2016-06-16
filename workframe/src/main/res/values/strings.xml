@@ -11,7 +11,8 @@
     <string name="prompt_email">请输入用户名</string>
     <string name="prompt_password">请输入密码</string>
     <string name="prompt_password1">请再次输入密码</string>
-    <string name="prompt_nickname">请输入昵称</string>
+    <string name="prompt_username">请输入昵称</string>
+    <string name="prompt_mobile">请输入手机号码</string>
 
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>

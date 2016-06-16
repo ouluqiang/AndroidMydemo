@@ -1,1 +1,1 @@
-include ':workframe', ':utils', ':IMKit', ':javabean'
+include ':workframe', ':utils', ':javabean', ':widget', ':myolq', ':bmobsdk'

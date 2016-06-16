@@ -12,8 +12,8 @@ import okhttp3.Response;
  */
 public class HeaderInterceptor implements Interceptor{
 
-    private String KOTEN="token";
-    private String SEED="seed";
+//    private String KOTEN="token";
+//    private String SEED="seed";
 
     @Override
     public Response intercept(Chain chain) throws IOException {

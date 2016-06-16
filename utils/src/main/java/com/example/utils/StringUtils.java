@@ -12,7 +12,7 @@ public class StringUtils {
     }
 
     public static boolean isEquals(CharSequence text, CharSequence text1) {
-        return TextUtils.equals(text, text1);
+        return !TextUtils.equals(text, text1);
     }
 
     public static boolean isLengthMin(CharSequence text, int length) {

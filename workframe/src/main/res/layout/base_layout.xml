@@ -6,10 +6,10 @@
               android:orientation="vertical"
     >
 
-    <com.example.my.widget.Top_Title
+    <com.example.widget.Top_Title
         android:id="@+id/toolbar_top"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.example.my.widget.Top_Title>
+        android:layout_height="wrap_content"></com.example.widget.Top_Title>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -1,10 +1,10 @@
 package com.example.my.mvp.base;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -12,9 +12,8 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import com.example.my.R;
-import com.example.my.widget.Top_Title;
+import com.example.widget.Top_Title;
 
-import butterknife.Bind;
 import butterknife.ButterKnife;
 
 /**
@@ -133,4 +132,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void setTitle(int text){
         toolbarTop.setTitle(getString(text));
     }
+
+    public void setLeftOnBack(){
+        toolbarTop.setOnClickLeftBack(this);
+    }
+
 }

@@ -2,6 +2,8 @@ package com.example.my.http.builder;
 
 import android.util.Log;
 
+import com.example.utils.L;
+
 import java.io.IOException;
 
 import okhttp3.Interceptor;
@@ -16,7 +18,7 @@ public class LoggingInterceptor implements Interceptor {
     public Response intercept(Chain chain) throws IOException {
 
         Request request=chain.request();
-        Log.i("url",request.url()+"");
+        L.log("url",request.url()+"");
         Response response=chain.proceed(request);
         return response;
     }

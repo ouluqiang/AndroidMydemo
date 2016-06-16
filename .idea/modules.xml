@@ -3,9 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidMydemo.iml" filepath="$PROJECT_DIR$/AndroidMydemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IMKit/IMKit.iml" filepath="$PROJECT_DIR$/IMKit/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/IMKita/IMKit.iml" filepath="$PROJECT_DIR$/IMKita/IMKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bmobsdk/bmobsdk.iml" filepath="$PROJECT_DIR$/bmobsdk/bmobsdk.iml" />
       <module fileurl="file://$PROJECT_DIR$/javabean/javabean.iml" filepath="$PROJECT_DIR$/javabean/javabean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myolq/myolq.iml" filepath="$PROJECT_DIR$/myolq/myolq.iml" />
       <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/widget/widget.iml" filepath="$PROJECT_DIR$/widget/widget.iml" />
       <module fileurl="file://$PROJECT_DIR$/workframe/workframe.iml" filepath="$PROJECT_DIR$/workframe/workframe.iml" />
     </modules>
   </component>

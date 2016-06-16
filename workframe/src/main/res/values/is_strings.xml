@@ -1,5 +1,0 @@
-<resources>
-    <string name="username_isnull">用户名不能为空</string>
-    <string name="userpass_isnull">密码不能为空</string>
-
-</resources>

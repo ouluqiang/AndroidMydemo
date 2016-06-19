@@ -16,7 +16,7 @@ public class StringUtils {
     }
 
     public static boolean isLengthMin(CharSequence text, int length) {
-        return text.length() > length ? true : false;
+        return text.length() >= length ? true : false;
     }
 
     public static boolean isLengthMax(CharSequence text, int length) {

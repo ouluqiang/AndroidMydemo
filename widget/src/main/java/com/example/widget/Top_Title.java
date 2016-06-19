@@ -44,6 +44,7 @@ public class Top_Title extends LinearLayout {
         toolbar.setTitle("");
         top_title = (TextView) view.findViewById(R.id.top_title);
         top_back = (ImageView) view.findViewById(R.id.top_back);
+        view.setVisibility(View.GONE);
 //        initTopBar(view);
     }
 

@@ -1,47 +1,84 @@
 package com.personage.myolq.mvp.view.activity;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.personage.myolq.R;
+import com.personage.myolq.base.InitActivity;
+import com.personage.myolq.mvp.view.adapter.HomeViewPager;
+import com.personage.myolq.mvp.view.fragment.ConversationFragment;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 
-public class HomePageActivity extends AppCompatActivity
+public class HomePageActivity extends InitActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    @Bind(R.id.top_title)
+    TextView topTitle;
+    @Bind(R.id.toolbar)
+    Toolbar toolbar;
+    @Bind(R.id.home_page_vp)
+    ViewPager homePageVp;
+    @Bind(R.id.home_page_tab)
+    TabLayout homePageTab;
+    @Bind(R.id.nav_view)
+    NavigationView navView;
+    @Bind(R.id.drawer_layout)
+    DrawerLayout drawerLayout;
+    private List<Fragment> fragments;
+    private List<String> titles;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void setLayout() {
         setContentView(R.layout.activity_home_page);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        ButterKnife.bind(this);
+        toolbar.setTitle("");
         setSupportActionBar(toolbar);
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.setDrawerListener(toggle);
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
+        navView.setNavigationItemSelectedListener(this);
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        getFragmentViews();
+        HomeViewPager homeViewPager=new HomeViewPager(getSupportFragmentManager(),fragments,titles);
+        homePageVp.setAdapter(homeViewPager);
+        homePageTab.setupWithViewPager(homePageVp);
+        homePageTab.setTabsFromPagerAdapter(homeViewPager);
     }
+
+    @Override
+    protected void getonCreate() {
+
+    }
+
+    private void getFragmentViews(){
+        fragments = new ArrayList<>();
+        fragments.add(new ConversationFragment());
+        fragments.add(new ConversationFragment());
+        fragments.add(new ConversationFragment());
+        titles = new ArrayList<>();
+        titles.add("tab1");
+        titles.add("tab2");
+        titles.add("tab3");
+    }
+
+
 
     @Override
     public void onBackPressed() {
@@ -99,4 +136,8 @@ public class HomePageActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
+
+
 }

@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#12B7F5</color>
+    <color name="colorPrimaryDark">#9912B7F5</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="text_select_false">#303F9F</color>
+    <color name="text_select_true">#30303F9F</color>
+
+    <color name="radio_textcolor">#444444</color>
 </resources>

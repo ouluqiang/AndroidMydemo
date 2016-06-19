@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="Click_Text">
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="text" format="string"></attr>
+        <attr name="textbackground" format="color"></attr>
+    </declare-styleable>
+
+</resources>

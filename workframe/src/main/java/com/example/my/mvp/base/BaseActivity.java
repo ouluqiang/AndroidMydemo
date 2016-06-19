@@ -100,6 +100,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         } else {
             getLayoutInflater().inflate(layoutResID, body);
             ButterKnife.bind(this);
+
             getonCreate();
 
         }
@@ -135,6 +136,10 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public void setLeftOnBack(){
         toolbarTop.setOnClickLeftBack(this);
+    }
+
+    public <T extends View> T getFindViewByid(int id){
+        return (T) findViewById(id);
     }
 
 }

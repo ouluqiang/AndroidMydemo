@@ -53,14 +53,14 @@
         android:layout_marginTop="20dp"
         >
 
-        <com.example.widget.Click_Text
-            android:id="@+id/tv_register"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="注册"
+        <!--<com.example.widgeta.Click_Text-->
+            <!--android:id="@+id/tv_register"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:text="注册"-->
 
-            android:layout_margin="10dp"
-            />
+            <!--android:layout_margin="10dp"-->
+            <!--/>-->
 
     </LinearLayout>
 </LinearLayout>

@@ -8,12 +8,12 @@ import com.example.my.mvp.base.IUiBaseView;
  */
 public interface IUiLoginView extends IUiBaseView{
 
-//    public String getUserName();
-//
-//    public String getUserPass();
-//
+    public String getUserName();
+
+    public String getUserPass();
+
 //    public void onLogin();
-//
+
 //    public void onRegister();
 
 

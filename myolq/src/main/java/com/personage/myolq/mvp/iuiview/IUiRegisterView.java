@@ -7,7 +7,7 @@ import com.example.my.mvp.base.IUiBaseView;
  */
 public interface IUiRegisterView extends IUiBaseView{
 
-    public String getemail();
+    public String getEmail();
 
     public String getPassWord();
 
@@ -17,6 +17,11 @@ public interface IUiRegisterView extends IUiBaseView{
 
     public String getMobile();
 
+    public String getAge();
+
+    public String getSex();
+
+    public String getNickName();
 
 
 }

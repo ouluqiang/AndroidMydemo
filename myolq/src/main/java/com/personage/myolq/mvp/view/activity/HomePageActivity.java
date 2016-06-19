@@ -17,6 +17,7 @@ import com.personage.myolq.R;
 import com.personage.myolq.base.InitActivity;
 import com.personage.myolq.mvp.view.adapter.HomeViewPager;
 import com.personage.myolq.mvp.view.fragment.ConversationFragment;
+import com.personage.myolq.mvp.view.fragment.FriendsFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -60,6 +61,7 @@ public class HomePageActivity extends InitActivity
         homePageVp.setAdapter(homeViewPager);
         homePageTab.setupWithViewPager(homePageVp);
         homePageTab.setTabsFromPagerAdapter(homeViewPager);
+
     }
 
     @Override
@@ -67,11 +69,13 @@ public class HomePageActivity extends InitActivity
 
     }
 
+
+
     private void getFragmentViews(){
         fragments = new ArrayList<>();
         fragments.add(new ConversationFragment());
-        fragments.add(new ConversationFragment());
-        fragments.add(new ConversationFragment());
+        fragments.add(new FriendsFragment());
+        fragments.add(new FriendsFragment());
         titles = new ArrayList<>();
         titles.add("tab1");
         titles.add("tab2");

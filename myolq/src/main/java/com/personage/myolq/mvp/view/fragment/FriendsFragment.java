@@ -1,5 +1,6 @@
 package com.personage.myolq.mvp.view.fragment;
 
+import com.personage.myolq.R;
 import com.personage.myolq.base.InitFragment;
 
 /**
@@ -8,7 +9,7 @@ import com.personage.myolq.base.InitFragment;
 public class FriendsFragment extends InitFragment{
     @Override
     public int getFragmentLayout() {
-        return 0;
+        return R.layout.fragment_friends;
     }
 
     @Override

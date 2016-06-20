@@ -7,14 +7,12 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 
-import com.example.javabean.entity.rongyun.User;
+import com.example.javabean.entity.rongyun.UserRong;
 import com.example.my.mvp.base.BaseActivity;
 import com.example.utils.StringUtils;
 import com.example.utils.ToastUtil;
 import com.personage.myolq.R;
-import com.personage.myolq.mvp.iuiview.IUiLoginView;
 import com.personage.myolq.mvp.view.activity.HomePageActivity;
-import com.personage.myolq.mvp.view.activity.RegisterActivity;
 import com.personage.myolq.test.iuiview.IUiTestView;
 import com.personage.myolq.test.testpresenter.TestPresenter;
 import com.personage.myolq.test.testpresenterimpl.TestPresenterImpl;
@@ -96,7 +94,7 @@ public class TestActivity extends BaseActivity implements IUiTestView {
 
     @Override
     public void onSucceed(Object object) {
-        User user= (User) object;
+        UserRong user= (UserRong) object;
     }
 
     @Override

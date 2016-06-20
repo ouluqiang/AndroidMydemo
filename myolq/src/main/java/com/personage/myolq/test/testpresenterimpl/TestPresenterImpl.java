@@ -4,13 +4,11 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.example.javabean.entity.BaseEntity;
-import com.example.javabean.entity.rongyun.User;
+import com.example.javabean.entity.rongyun.UserRong;
 import com.example.my.http.backcall.RBackCall;
 import com.example.utils.L;
 import com.personage.myolq.R;
 import com.personage.myolq.api.OnResponse;
-import com.personage.myolq.mvp.iuiview.IUiLoginView;
-import com.personage.myolq.mvp.iuiview.IUiRegisterView;
 import com.personage.myolq.test.iuiview.IUiTest2View;
 import com.personage.myolq.test.iuiview.IUiTestView;
 import com.personage.myolq.test.testmodel.TestModel;
@@ -46,7 +44,7 @@ public class TestPresenterImpl implements TestPresenter {
 
     @Override
     public void getEmailLoginToken2(final Context context, String email, String password) {
-        mloginModel.getEmailLoginToken1(email, password, new Subscriber<BaseEntity<User>>() {
+        mloginModel.getEmailLoginToken1(email, password, new Subscriber<BaseEntity<UserRong>>() {
             @Override
             public void onCompleted() {
                 Toast.makeText(context,
@@ -64,9 +62,9 @@ public class TestPresenterImpl implements TestPresenter {
             }
 
             @Override
-            public void onNext(BaseEntity<User> userBaseEntity) {
+            public void onNext(BaseEntity<UserRong> userBaseEntity) {
                 L.log("数据："+userBaseEntity.getCode());
-                BaseEntity<User> baseEntity=userBaseEntity;
+                BaseEntity<UserRong> baseEntity=userBaseEntity;
                 if(OnResponse.is_OK(baseEntity.getCode())){
                     mIUiLoginView.onToast(baseEntity.getCode()+baseEntity.getResult());
                 }else{
@@ -78,7 +76,7 @@ public class TestPresenterImpl implements TestPresenter {
 
     @Override
     public void getEmailLoginToken1(final Context context, String email, String password) {
-        mloginModel.getEmailLoginToken1(email, password, new Subscriber<BaseEntity<User>>() {
+        mloginModel.getEmailLoginToken1(email, password, new Subscriber<BaseEntity<UserRong>>() {
             @Override
             public void onCompleted() {
                 Toast.makeText(context,
@@ -96,9 +94,9 @@ public class TestPresenterImpl implements TestPresenter {
             }
 
             @Override
-            public void onNext(BaseEntity<User> userBaseEntity) {
+            public void onNext(BaseEntity<UserRong> userBaseEntity) {
                 L.log("数据："+userBaseEntity.getCode());
-                BaseEntity<User> baseEntity=userBaseEntity;
+                BaseEntity<UserRong> baseEntity=userBaseEntity;
                 if(OnResponse.is_OK(baseEntity.getCode())){
                     mIUiLoginView.onToast(baseEntity.getCode());
                 }else{
@@ -110,11 +108,11 @@ public class TestPresenterImpl implements TestPresenter {
 
     @Override
     public void getEmailLoginToken(final Context context, String email, String password) {
-        mloginModel.getEmailLoginToken(email, password, new RBackCall<BaseEntity<User>>() {
+        mloginModel.getEmailLoginToken(email, password, new RBackCall<BaseEntity<UserRong>>() {
             @Override
             public void onResponse(Call call, Response response) {
                 L.log("数据："+response.body().toString());
-                BaseEntity<User> baseEntity= (BaseEntity) response.body();
+                BaseEntity<UserRong> baseEntity= (BaseEntity) response.body();
                 if(OnResponse.is_OK(baseEntity.getCode())){
                     mIUiLoginView.onSucceed(baseEntity.getResult());
                 }else{

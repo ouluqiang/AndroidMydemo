@@ -1,7 +1,7 @@
 package com.personage.myolq.api;
 
 import com.example.javabean.entity.BaseEntity;
-import com.example.javabean.entity.rongyun.User;
+import com.example.javabean.entity.rongyun.UserRong;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -20,11 +20,11 @@ public interface ServerApi {
 
     @FormUrlEncoded
     @POST(Server.EMAIL_LOGIN_TOKEN)
-    Call<BaseEntity<User>> getEmailLoginToken(@Field("email") String email, @Field("password") String password);
+    Call<BaseEntity<UserRong>> getEmailLoginToken(@Field("email") String email, @Field("password") String password);
 
     @FormUrlEncoded
     @POST(Server.EMAIL_LOGIN_TOKEN)
-    Observable<BaseEntity<User>> getEmailLoginToken1(@Field("email") String email, @Field("password") String password);
+    Observable<BaseEntity<UserRong>> getEmailLoginToken1(@Field("email") String email, @Field("password") String password);
 
 
 }

@@ -7,7 +7,7 @@ package com.example.javabean.entity.rongyun;
  portrait=http: //www.gravatar.com/avatar/b7dda8b4f861352fb7beb09d96f47cc5?s=82&d=wavatar,
  token=kV2tPaRKYdwhqVVY6wxmYrI6ZiT8q7s0UEaMPWY0lMy1d7fiy/CwHXLhWPSBGEEbXSiPW/U+/s+ukGduTG7UgA==
  */
-public class User {
+public class UserRong {
 
     private String id;
     private String username;

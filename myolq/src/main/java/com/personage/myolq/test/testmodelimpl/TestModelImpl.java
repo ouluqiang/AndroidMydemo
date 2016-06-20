@@ -1,7 +1,7 @@
 package com.personage.myolq.test.testmodelimpl;
 
 import com.example.javabean.entity.BaseEntity;
-import com.example.javabean.entity.rongyun.User;
+import com.example.javabean.entity.rongyun.UserRong;
 import com.example.my.http.HttpLoader;
 import com.example.my.http.backcall.RBackCall;
 import com.personage.myolq.api.ServerApi;
@@ -20,21 +20,21 @@ import rx.schedulers.Schedulers;
 public class TestModelImpl implements TestModel {
 
     @Override
-    public void getEmailLoginToken(String email, String password, RBackCall<BaseEntity<User>> backCall) {
-        Call<BaseEntity<User>> call=HttpLoader.getInstace().getCreate(ServerApi.class).getEmailLoginToken(email,password);
+    public void getEmailLoginToken(String email, String password, RBackCall<BaseEntity<UserRong>> backCall) {
+        Call<BaseEntity<UserRong>> call=HttpLoader.getInstace().getCreate(ServerApi.class).getEmailLoginToken(email,password);
         call.enqueue(backCall);
     }
 
     @Override
-    public void getEmailLoginToken2(String email, String password, RxBackCall<BaseEntity<User>> backCall) {
-        Observable<BaseEntity<User>> observable=HttpLoader.getInstace().getRetrofit1().create(ServerApi.class).getEmailLoginToken1(email,password);
+    public void getEmailLoginToken2(String email, String password, RxBackCall<BaseEntity<UserRong>> backCall) {
+        Observable<BaseEntity<UserRong>> observable=HttpLoader.getInstace().getRetrofit1().create(ServerApi.class).getEmailLoginToken1(email,password);
         observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(backCall);
 
     }
 
     @Override
-    public void getEmailLoginToken1(String email, String password, Subscriber<BaseEntity<User>> backCall) {
-        Observable<BaseEntity<User>> observable=HttpLoader.getInstace().getRetrofit1().create(ServerApi.class).getEmailLoginToken1(email,password);
+    public void getEmailLoginToken1(String email, String password, Subscriber<BaseEntity<UserRong>> backCall) {
+        Observable<BaseEntity<UserRong>> observable=HttpLoader.getInstace().getRetrofit1().create(ServerApi.class).getEmailLoginToken1(email,password);
         observable.subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(backCall);
     }
 

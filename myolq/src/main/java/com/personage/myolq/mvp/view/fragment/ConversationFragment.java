@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.javabean.entity.Conversation;
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitFragment;
 import com.personage.myolq.mvp.view.adapter.RecyclerConversation;
@@ -25,7 +24,7 @@ public class ConversationFragment extends InitFragment {
     RecyclerView conversationRv;
     @Bind(R.id.conversation_srefresh)
     SwipeRefreshLayout conversationSrefresh;
-    List<Conversation> conversations;
+//    List<Conversation> conversations;
 
     @Override
     public int getFragmentLayout() {
@@ -34,8 +33,8 @@ public class ConversationFragment extends InitFragment {
 
     @Override
     public void getFragmentCreateView() {
-        RecyclerConversation conversation=new RecyclerConversation(getActivity(),conversations);
-        conversationRv.setAdapter(conversation);
+//        RecyclerConversation conversation=new RecyclerConversation(getActivity(),conversations);
+//        conversationRv.setAdapter(conversation);
     }
 
 

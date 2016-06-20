@@ -9,8 +9,11 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.personage.myolq.R;
@@ -24,10 +27,18 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import cn.bmob.newim.BmobIM;
+import cn.bmob.newim.core.ConnectionStatus;
+import cn.bmob.newim.listener.ConnectListener;
+import cn.bmob.newim.listener.ConnectStatusChangeListener;
+import cn.bmob.newim.listener.ObseverListener;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import de.greenrobot.event.EventBus;
 
 
 public class HomePageActivity extends InitActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener , ObseverListener {
 
     @Bind(R.id.top_title)
     TextView topTitle;
@@ -42,7 +53,8 @@ public class HomePageActivity extends InitActivity
     @Bind(R.id.drawer_layout)
     DrawerLayout drawerLayout;
     private List<Fragment> fragments;
-    private List<String> titles;
+    private List<View> titles;
+    private HomeViewPager homeViewPager;
 
     @Override
     protected void setLayout() {
@@ -57,7 +69,7 @@ public class HomePageActivity extends InitActivity
         navView.setNavigationItemSelectedListener(this);
 
         getFragmentViews();
-        HomeViewPager homeViewPager=new HomeViewPager(getSupportFragmentManager(),fragments,titles);
+        homeViewPager = new HomeViewPager(getSupportFragmentManager(),fragments,this);
         homePageVp.setAdapter(homeViewPager);
         homePageTab.setupWithViewPager(homePageVp);
         homePageTab.setTabsFromPagerAdapter(homeViewPager);
@@ -66,7 +78,28 @@ public class HomePageActivity extends InitActivity
 
     @Override
     protected void getonCreate() {
-
+//        User user = BmobUser.getCurrentUser(this,User.class);
+//        BmobIM.connect(user.getObjectId(), new ConnectListener() {
+//            @Override
+//            public void done(String uid, BmobException e) {
+//                if (e == null) {
+//                    Logger.i("connect success");
+//                    //服务器连接成功就发送一个更新事件，同步更新会话及主页的小红点
+//                    EventBus.getDefault().post(new RefreshEvent());
+//                } else {
+//                    Logger.e(e.getErrorCode() + "/" + e.getMessage());
+//                }
+//            }
+//        });
+//        //监听连接状态，也可通过BmobIM.getInstance().getCurrentStatus()来获取当前的长连接状态
+//        BmobIM.getInstance().setOnConnectStatusChangeListener(new ConnectStatusChangeListener() {
+//            @Override
+//            public void onChange(ConnectionStatus status) {
+//                toast("" + status.getMsg());
+//            }
+//        });
+//        //解决leancanary提示InputMethodManager内存泄露的问题
+//        IMMLeaks.fixFocusedViewLeak(getApplication());
     }
 
 
@@ -77,9 +110,13 @@ public class HomePageActivity extends InitActivity
         fragments.add(new FriendsFragment());
         fragments.add(new FriendsFragment());
         titles = new ArrayList<>();
-        titles.add("tab1");
-        titles.add("tab2");
-        titles.add("tab3");
+        for (int i=0;i<3;i++){
+            TabLayout.Tab tab=homePageTab.getTabAt(i);
+            if (tab != null) {
+                tab.setCustomView(homeViewPager.getTabView(i));
+            }
+        }
+
     }
 
 

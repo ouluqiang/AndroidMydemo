@@ -14,11 +14,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.example.javabean.entity.UserBmob;
-import com.example.javabean.entity.rongyun.User;
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitActivity;
-import com.personage.myolq.mvp.model.usermodel.UserModel;
+import com.personage.myolq.bean.bomo.User;
 
 public class MainActivity extends InitActivity {
 
@@ -52,7 +50,7 @@ public class MainActivity extends InitActivity {
     @Override
     protected void getonCreate() {
 
-        handler.postDelayed(runnable,1000);
+        handler.postDelayed(runnable,2000);
 
     }
 
@@ -60,7 +58,7 @@ public class MainActivity extends InitActivity {
     Runnable runnable=new Runnable() {
         @Override
         public void run() {
-            UserBmob user = UserBmob.getCurrentUser(getApplicationContext(),UserBmob.class);
+            User user = User.getCurrentUser(getApplicationContext(),User.class);
             if (user == null) {
                 startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             }else{

@@ -25,6 +25,8 @@
         <activity
             android:name=".mvp.view.activity.HomePageActivity"
             android:label="@string/title_activity_home_page"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
@@ -47,11 +49,7 @@
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <activity
-            android:name=".mvp.view.activity.AActivit"
-            android:label="@string/title_activity_a"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+
     </application>
 
 </manifest>

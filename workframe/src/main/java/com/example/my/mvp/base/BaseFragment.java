@@ -14,6 +14,8 @@ import butterknife.ButterKnife;
  */
 public abstract class BaseFragment extends Fragment{
 
+    private View view;
+
     public abstract int getFragmentLayout();
 
     public abstract void getFragmentCreateView();
@@ -21,8 +23,8 @@ public abstract class BaseFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view=inflater.inflate(getFragmentLayout(), container,false);
-        ButterKnife.bind(this,view);
+        view = inflater.inflate(getFragmentLayout(), container,false);
+        ButterKnife.bind(this, view);
         getFragmentCreateView();
         return view;
     }
@@ -32,4 +34,9 @@ public abstract class BaseFragment extends Fragment{
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
+
+    public <T extends View> T getFindViewById(int id){
+        return (T) view.findViewById(id);
+    }
+
 }

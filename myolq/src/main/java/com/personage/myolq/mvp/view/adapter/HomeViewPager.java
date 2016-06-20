@@ -1,10 +1,14 @@
 package com.personage.myolq.mvp.view.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
+import android.view.LayoutInflater;
 import android.view.View;
+
+import com.personage.myolq.R;
 
 import java.util.List;
 
@@ -14,14 +18,26 @@ import java.util.List;
 public class HomeViewPager extends FragmentPagerAdapter{
 
     private List<Fragment> mViews;
-    private List<String> mTitle;
+    private List<View> mTitle;
+    private String tabTitles[] = new String[]{"TAB1","TAB2","TAB3"};
+    private Context mContext;
 
-    public HomeViewPager(FragmentManager fm,List<Fragment> views,List<String> title) {
+    public HomeViewPager(FragmentManager fm,List<Fragment> views,List<View> title) {
         super(fm);
         mViews=views;
         mTitle=title;
     }
 
+    public HomeViewPager(FragmentManager fm,List<Fragment> views,Context context) {
+        super(fm);
+        mViews=views;
+        mContext=context;
+    }
+
+    public View getTabView(int position) {
+        View tabview= LayoutInflater.from(mContext).inflate(R.layout.tab_item_home, null);
+        return tabview;
+    }
 
     @Override
     public Fragment getItem(int position) {
@@ -35,6 +51,6 @@ public class HomeViewPager extends FragmentPagerAdapter{
 
     @Override
     public CharSequence getPageTitle(int position) {
-        return mTitle.get(position);
+        return tabTitles[position];
     }
 }

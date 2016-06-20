@@ -1,21 +1,28 @@
 package com.personage.myolq.base;
 
-import android.content.Context;
-
-import com.example.bmobsdk.BmobIm;
+import com.example.bmobsdk.bmob.BmobIm;
 import com.example.my.mvp.base.BaseApplication;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 
-import cn.bmob.newim.BmobIM;
-
 /**
  * Created by Administrator on 2016/6/14 0014.
  */
 public class InitApplication extends BaseApplication {
 
+
+    private static InitApplication INSTANCE;
+    public static InitApplication INSTANCE(){
+        return INSTANCE;
+    }
+    private void setInstance(InitApplication app) {
+        setBmobIMApplication(app);
+    }
+    private static void setBmobIMApplication(InitApplication a) {
+        InitApplication.INSTANCE = a;
+    }
 
     @Override
     public void onCreate() {

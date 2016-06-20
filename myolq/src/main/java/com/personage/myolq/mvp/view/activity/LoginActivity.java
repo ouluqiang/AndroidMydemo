@@ -1,11 +1,8 @@
 package com.personage.myolq.mvp.view.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.EditText;
 
-import com.example.bmobsdk.BmobYun;
-import com.example.my.mvp.base.BaseActivity;
 import com.example.utils.MD5Util;
 import com.example.utils.StringUtils;
 import com.example.utils.ToastUtil;
@@ -17,7 +14,6 @@ import com.personage.myolq.mvp.presenter.userpresenter.UserPresenter;
 import com.personage.myolq.mvp.presenter.userpresenterimpl.UserPresenterImpl;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

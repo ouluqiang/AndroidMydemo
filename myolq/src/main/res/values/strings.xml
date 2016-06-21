@@ -32,4 +32,7 @@
     <string name="register_succeed">注册成功</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_a">AActivit</string>
+    <string name="title_activity_addition">AdditionActivity</string>
+    <string name="title_activity_user_info">UserInfoActivityActivity</string>
+    <string name="title_activity_chat">ChatActivity</string>
 </resources>

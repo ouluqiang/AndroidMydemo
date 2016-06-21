@@ -1,4 +1,4 @@
-package com.example.widget.sortlist;
+package com.personage.myolq.bmob.bean;
 
 import com.example.widget.sortlist.SortModel;
 
@@ -9,9 +9,9 @@ import java.util.Comparator;
  * @author xiaanming
  *
  */
-public class PinyinComparator implements Comparator<SortModel> {
+public class PinyinComparator implements Comparator<Friend> {
 
-	public int compare(SortModel o1, SortModel o2) {
+	public int compare(Friend o1, Friend o2) {
 		if (o1.getSortLetters().equals("@")
 				|| o2.getSortLetters().equals("#")) {
 			return -1;

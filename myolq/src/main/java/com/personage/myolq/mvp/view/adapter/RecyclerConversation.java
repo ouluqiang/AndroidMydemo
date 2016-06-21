@@ -1,13 +1,5 @@
 package com.personage.myolq.mvp.view.adapter;
 
-import android.content.Context;
-
-import com.example.my.mvp.adapter.RecycleHolder;
-import com.example.my.mvp.adapter.RecyclerAdapter;
-import com.personage.myolq.R;
-
-import java.util.List;
-
 /**
  * Created by Administrator on 2016/6/19 0019.
  */

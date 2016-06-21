@@ -1,4 +1,4 @@
-package com.example.my.mvp.adapter;
+package com.example.my.mvp.adapter.recycleadapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.util.SparseArray;

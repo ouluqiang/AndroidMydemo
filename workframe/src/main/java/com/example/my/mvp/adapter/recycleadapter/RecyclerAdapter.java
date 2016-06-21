@@ -1,4 +1,4 @@
-package com.example.my.mvp.adapter;
+package com.example.my.mvp.adapter.recycleadapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -27,6 +27,14 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecycleHol
         mContext=context;
         mData=data;
         mInflater=LayoutInflater.from(context);
+    }
+
+    /**获取用户
+     * @param position
+     * @return
+     */
+    public T getItem(int position){
+        return mData.get(position);
     }
 
     @Override
@@ -83,8 +91,21 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecycleHol
         this.onItemLongClickListener = onItemLongClickListener;
     }
 
-    public void addData(T t){
+    public void add(T t){
         mData.add(t);
+        notifyDataSetChanged();
+    }
+
+    public void addDatas(List<T> t){
+        mData.addAll(t);
+        notifyDataSetChanged();
+    }
+
+    public void setDatas(List<T> list){
+        mData.clear();
+        if (null != list) {
+            mData.addAll(list);
+        }
         notifyDataSetChanged();
     }
 

@@ -7,6 +7,8 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.personage.myolq.R;
 
@@ -36,6 +38,9 @@ public class HomeViewPager extends FragmentPagerAdapter{
 
     public View getTabView(int position) {
         View tabview= LayoutInflater.from(mContext).inflate(R.layout.tab_item_home, null);
+        ImageView iv_tab_icon= (ImageView) tabview.findViewById(R.id.iv_tab_icon);
+        TextView tv_tab_title= (TextView) tabview.findViewById(R.id.tv_tab_title);
+        tv_tab_title.setText("title");
         return tabview;
     }
 

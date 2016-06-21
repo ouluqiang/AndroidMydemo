@@ -1,5 +1,6 @@
 package com.personage.myolq.mvp.view.fragment;
 
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -11,25 +12,32 @@ import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 import com.example.widget.sortlist.CharacterParser;
 import com.example.widget.sortlist.ClearEditText;
-import com.example.widget.sortlist.PinyinComparator;
 import com.example.widget.sortlist.SideBar;
-import com.example.widget.sortlist.SortModel;
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitFragment;
-import com.personage.myolq.mvp.view.adapter.SortAdapter;
+import com.personage.myolq.bmob.bean.Friend;
+import com.personage.myolq.bmob.bean.PinyinComparator;
+import com.personage.myolq.bmob.event.RefreshEvent;
+import com.personage.myolq.bmob.model.UserModel;
+import com.personage.myolq.mvp.view.adapter.FriendsAdapter;
 
+
+import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 import butterknife.Bind;
+import cn.bmob.v3.listener.FindListener;
 
 /**
  * Created by Administrator on 2016/6/18 0018.
  */
 public class FriendsFragment extends InitFragment {
 
+    @Bind(R.id.friends_swipe)
+    SwipeRefreshLayout friends_swipe;
     @Bind(R.id.filter_edit)
     ClearEditText mClearEditText;
     @Bind(R.id.country_lvcountry)
@@ -38,13 +46,13 @@ public class FriendsFragment extends InitFragment {
     TextView dialog;
     @Bind(R.id.sidrbar)
     SideBar sideBar;
-    private SortAdapter adapter;
+    private FriendsAdapter adapter;
 
     /**
      * 汉字转换成拼音的类
      */
     private CharacterParser characterParser;
-    private List<SortModel> SourceDateList;
+    private List<Friend> SourceDateList;
 
     /**
      * 根据拼音来排列ListView里面的数据类
@@ -89,7 +97,7 @@ public class FriendsFragment extends InitFragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 //这里要利用adapter.getItem(position)来获取当前position所对应的对象
-                Toast.makeText(getActivity(), ((SortModel) adapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), ((Friend) adapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -97,7 +105,7 @@ public class FriendsFragment extends InitFragment {
 
         // 根据a-z进行排序源数据
         Collections.sort(SourceDateList, pinyinComparator);
-        adapter = new SortAdapter(getActivity(), SourceDateList);
+        adapter = new FriendsAdapter(getActivity(), SourceDateList);
         sortListView.setAdapter(adapter);
 
 
@@ -121,6 +129,12 @@ public class FriendsFragment extends InitFragment {
             public void afterTextChanged(Editable s) {
             }
         });
+        friends_swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                query();
+            }
+        });
     }
 
 
@@ -130,11 +144,11 @@ public class FriendsFragment extends InitFragment {
      * @param date
      * @return
      */
-    private List<SortModel> filledData(String[] date) {
-        List<SortModel> mSortList = new ArrayList<SortModel>();
+    private List<Friend> filledData(String[] date) {
+        List<Friend> mSortList = new ArrayList<Friend>();
 
         for (int i = 0; i < date.length; i++) {
-            SortModel sortModel = new SortModel();
+            Friend sortModel = new Friend();
             sortModel.setName(date[i]);
             //汉字转换成拼音
             String pinyin = characterParser.getSelling(date[i]);
@@ -159,13 +173,13 @@ public class FriendsFragment extends InitFragment {
      * @param filterStr
      */
     private void filterData(String filterStr) {
-        List<SortModel> filterDateList = new ArrayList<SortModel>();
+        List<Friend> filterDateList = new ArrayList<Friend>();
 
         if (TextUtils.isEmpty(filterStr)) {
             filterDateList = SourceDateList;
         } else {
             filterDateList.clear();
-            for (SortModel sortModel : SourceDateList) {
+            for (Friend sortModel : SourceDateList) {
                 String name = sortModel.getName();
                 if (name.indexOf(filterStr.toString()) != -1 || characterParser.getSelling(name).startsWith(filterStr.toString())) {
                     filterDateList.add(sortModel);
@@ -179,5 +193,35 @@ public class FriendsFragment extends InitFragment {
     }
 
 
+    /**注册自定义消息接收事件
+     * @param event
+     */
+    @Subscribe
+    public void onEventMainThread(RefreshEvent event){
+        //重新刷新列表
+        log("---联系人界面接收到自定义消息---");
+        adapter.notifyDataSetChanged();
+    }
+
+    /**
+     查询本地会话
+     */
+    public void query(){
+        UserModel.getInstance().queryFriends(new FindListener<Friend>() {
+            @Override
+            public void onSuccess(List<Friend> list) {
+                adapter.addlist(list);
+//                adapter.notifyDataSetChanged();
+                friends_swipe.setRefreshing(false);
+            }
+
+            @Override
+            public void onError(int i, String s) {
+                adapter.addlist(null);
+//                adapter.notifyDataSetChanged();
+                friends_swipe.setRefreshing(false);
+            }
+        });
+    }
 
 }

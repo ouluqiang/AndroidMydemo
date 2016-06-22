@@ -27,6 +27,7 @@ import com.personage.myolq.bmob.util.IMMLeaks;
 import com.personage.myolq.mvp.view.adapter.HomeViewPager;
 import com.personage.myolq.mvp.view.fragment.ConversationFragment;
 import com.personage.myolq.mvp.view.fragment.FriendsFragment;
+import com.personage.myolq.mvp.view.fragment.SetFragment;
 
 import org.greenrobot.eventbus.Subscribe;
 
@@ -130,7 +131,7 @@ public class HomePageActivity extends InitActivity
         fragments = new ArrayList<>();
         fragments.add(new ConversationFragment());
         fragments.add(new FriendsFragment());
-        fragments.add(new FriendsFragment());
+        fragments.add(new SetFragment());
         titles = new ArrayList<>();
 
 

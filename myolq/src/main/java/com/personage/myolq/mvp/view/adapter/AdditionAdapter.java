@@ -19,7 +19,6 @@ public class AdditionAdapter extends RecyclerAdapter<User>{
         super(context, data);
     }
 
-
     @Override
     public int getLayout() {
         return R.layout.item_friend;
@@ -27,7 +26,8 @@ public class AdditionAdapter extends RecyclerAdapter<User>{
 
     @Override
     public void convert(RecycleHolder holder, User data, int position) {
-        holder.setText(R.id.item_name,data.getNickname());
+        holder.setText(R.id.item_nickname,data.getNickname());
+        holder.setText(R.id.item_username,data.getUsername());
     }
 
 

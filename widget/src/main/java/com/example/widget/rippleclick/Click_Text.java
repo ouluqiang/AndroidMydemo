@@ -62,13 +62,13 @@ public class Click_Text extends LinearLayout{
         rippleButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickListener.ClickListener();
+                onClickListener.onClick(v);
             }
         });
     }
 
     public interface OnClickListener{
-        public void ClickListener();
+        public void onClick(View v);
     }
 
 

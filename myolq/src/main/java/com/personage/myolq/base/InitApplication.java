@@ -27,6 +27,7 @@ public class InitApplication extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        setInstance(this);
         //只有主进程运行的时候才需要初始化
         if (getApplicationInfo().packageName.equals(getMyProcessName())){
             //im初始化

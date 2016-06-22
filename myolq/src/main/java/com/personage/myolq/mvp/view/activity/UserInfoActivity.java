@@ -60,16 +60,25 @@ public class UserInfoActivity extends InitActivity {
         info = new BmobIMUserInfo(user.getObjectId(),user.getUsername(),user.getAvatar());
 //        ImageLoaderFactory.getLoader().loadAvator(iv_avator,user.getAvatar(),R.mipmap.head);
         tvInfoUsername.setText(user.getUsername());
+        tvInfoNickname.setText(user.getNickname());
+        clickAdd.setOnClickListener(new Click_Text.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendAddFriendMessage();
+            }
+        });
+        clickChat.setOnClickListener(new Click_Text.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onChatClick();
+            }
+        });
     }
 
     public String getCurrentUid(){
         return BmobUser.getCurrentUser(this,User.class).getObjectId();
     }
 
-    @OnClick(R.id.click_add)
-    public void onAddClick(View view){
-        sendAddFriendMessage();
-    }
 
     /**
      * 发送添加好友的请求
@@ -100,8 +109,7 @@ public class UserInfoActivity extends InitActivity {
         });
     }
 
-    @OnClick(R.id.click_chat)
-    public void onChatClick(View view){
+    private void onChatClick(){
         //启动一个会话，设置isTransient设置为false,则会在本地数据库的会话列表中先创建（如果没有）与该用户的会话信息，且将用户信息存储到本地的用户表中
         BmobIMConversation c = BmobIM.getInstance().startPrivateConversation(info,false,null);
         Bundle bundle = new Bundle();

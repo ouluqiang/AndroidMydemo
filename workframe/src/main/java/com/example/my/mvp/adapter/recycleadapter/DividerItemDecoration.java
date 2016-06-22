@@ -2,13 +2,15 @@ package com.example.my.mvp.adapter.recycleadapter;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.TypedValue;
 import android.view.View;
+
+import com.example.my.R;
+
 
 /**
  * Created by olq on 2016/6/1.
@@ -46,7 +48,7 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration{
         }
         mItemSize = (int) TypedValue.applyDimension(mItemSize, TypedValue.COMPLEX_UNIT_DIP, context.getResources().getDisplayMetrics());
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG) ;
-        mPaint.setColor(Color.BLUE);
+        mPaint.setColor(context.getResources().getColor(R.color.dimgray));
          /*设置填充*/
         mPaint.setStyle(Paint.Style.FILL);
     }

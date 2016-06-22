@@ -6,6 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.my.R;
+
 import java.util.List;
 
 /**
@@ -45,7 +47,7 @@ public abstract class RecyclerAdapter<T> extends RecyclerView.Adapter<RecycleHol
     @Override
     public void onBindViewHolder(final RecycleHolder holder, final int position) {
         if(onItemClickListener!=null){
-//            holder.itemView.setBackgroundResource(R.drawable.recycle_bg);
+            holder.itemView.setBackgroundResource(R.drawable.recycle_bg);
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

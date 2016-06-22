@@ -13,6 +13,8 @@
         android:layout_height="match_parent"
         android:background="#12B7F5"
         android:text="SEND"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:textColor="@color/white"
         android:textSize="18dp"/>
 </android.support.v7.widget.CardView>

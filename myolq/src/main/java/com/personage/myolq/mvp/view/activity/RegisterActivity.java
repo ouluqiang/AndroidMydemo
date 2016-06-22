@@ -60,7 +60,7 @@ public class RegisterActivity extends InitActivity implements IUiRegisterView {
         Click_Text click_register= getFindViewByid(R.id.click_register);
         click_register.setOnClickListener(new Click_Text.OnClickListener() {
             @Override
-            public void ClickListener() {
+            public void onClick(View v) {
                 onRegister();
             }
         });

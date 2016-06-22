@@ -1,6 +1,7 @@
 package com.personage.myolq.mvp.view.activity;
 
 import android.content.Intent;
+import android.view.View;
 import android.widget.EditText;
 
 import com.example.utils.MD5Util;
@@ -42,7 +43,7 @@ public class LoginActivity extends InitActivity implements IUiLoginView{
         Click_Text click_login=getFindViewByid(R.id.click_login);
         click_login.setOnClickListener(new Click_Text.OnClickListener() {
             @Override
-            public void ClickListener() {
+            public void onClick(View v) {
                 onLogin();
 
             }

@@ -64,6 +64,11 @@
             android:label="@string/title_activity_chat"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".mvp.view.activity.NewFriendActivity"
+            android:label="@string/title_activity_new_friend"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

@@ -1,11 +1,14 @@
 package com.personage.myolq.base;
 
-import com.example.bmobsdk.bmob.BmobIm;
 import com.example.my.mvp.base.BaseApplication;
+import com.personage.myolq.bmob.DemoMessageHandler;
+import com.personage.myolq.bmob.base.UniversalImageLoader;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+
+import cn.bmob.newim.BmobIM;
 
 /**
  * Created by Administrator on 2016/6/14 0014.
@@ -31,9 +34,11 @@ public class InitApplication extends BaseApplication {
         //只有主进程运行的时候才需要初始化
         if (getApplicationInfo().packageName.equals(getMyProcessName())){
             //im初始化
-            BmobIm.getBmobIM(this);
+            BmobIM.init(this);
+            //注册消息接收器
+            BmobIM.registerDefaultMessageHandler(new DemoMessageHandler(this));
         }
-
+        UniversalImageLoader.initImageLoader(this);
     }
 
     /**

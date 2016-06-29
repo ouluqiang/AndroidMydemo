@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -52,16 +53,24 @@ import de.greenrobot.event.EventBus;
 
 public class HomePageActivity extends InitActivity
         implements NavigationView.OnNavigationItemSelectedListener , ObseverListener {
+    @Bind(R.id.iv_conversation_tips)
+    ImageView iv_conversation_tips;
+    @Bind(R.id.iv_set_tips)
+    ImageView iv_set_tips;
 
-
+    @Bind(R.id.btn_conversation)
+    Button btn_conversation;
+    @Bind(R.id.btn_contact)
+    Button btn_contact;
+    @Bind(R.id.btn_set)
+    Button btn_set;
     @Bind(R.id.top_title)
     TextView topTitle;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
     @Bind(R.id.home_page_vp)
     ViewPager homePageVp;
-    @Bind(R.id.home_page_tab)
-    TabLayout homePageTab;
+
     @Bind(R.id.nav_view)
     NavigationView navView;
     @Bind(R.id.drawer_layout)
@@ -85,14 +94,6 @@ public class HomePageActivity extends InitActivity
         getFragmentViews();
         homeViewPager = new HomeViewPager(getSupportFragmentManager(),fragments,this);
         homePageVp.setAdapter(homeViewPager);
-        homePageTab.setupWithViewPager(homePageVp);
-        homePageTab.setTabsFromPagerAdapter(homeViewPager);
-        for (int i=0;i<3;i++){
-            TabLayout.Tab tab=homePageTab.getTabAt(i);
-            if (tab != null) {
-                tab.setCustomView(homeViewPager.getTabView(i));
-            }
-        }
     }
 
     @Override
@@ -127,13 +128,25 @@ public class HomePageActivity extends InitActivity
         startActivity(new Intent(this,AdditionActivity.class));
     }
 
+    @OnClick(R.id.btn_conversation)
+    public void onViewOne(){
+        homePageVp.setCurrentItem(0);
+    }
+    @OnClick(R.id.btn_contact)
+    public void onViewTwo(){
+        homePageVp.setCurrentItem(1);
+    }
+
+    @OnClick(R.id.btn_set)
+    public void onViewThree(){
+        homePageVp.setCurrentItem(2);
+    }
+
     private void getFragmentViews(){
         fragments = new ArrayList<>();
         fragments.add(new ConversationFragment());
         fragments.add(new FriendsFragment());
         fragments.add(new SetFragment());
-        titles = new ArrayList<>();
-
 
     }
 
@@ -180,17 +193,17 @@ public class HomePageActivity extends InitActivity
 
     private void checkRedPoint(){
         int count = (int)BmobIM.getInstance().getAllUnReadCount();
-//        if(count>0){
-//            iv_conversation_tips.setVisibility(View.VISIBLE);
-//        }else{
-//            iv_conversation_tips.setVisibility(View.GONE);
-//        }
+        if(count>0){
+            iv_conversation_tips.setVisibility(View.VISIBLE);
+        }else{
+            iv_conversation_tips.setVisibility(View.GONE);
+        }
 //        //是否有好友添加的请求
-//        if(NewFriendManager.getInstance(this).hasNewFriendInvitation()){
-//            iv_contact_tips.setVisibility(View.VISIBLE);
-//        }else{
-//            iv_contact_tips.setVisibility(View.GONE);
-//        }
+        if(NewFriendManager.getInstance(this).hasNewFriendInvitation()){
+            iv_set_tips.setVisibility(View.VISIBLE);
+        }else{
+            iv_set_tips.setVisibility(View.GONE);
+        }
     }
 
     @Override

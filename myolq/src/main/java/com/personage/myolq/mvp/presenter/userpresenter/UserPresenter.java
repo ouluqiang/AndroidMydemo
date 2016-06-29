@@ -2,10 +2,6 @@ package com.personage.myolq.mvp.presenter.userpresenter;
 
 import android.content.Context;
 
-import com.personage.myolq.base.BmobBackCall;
-
-import cn.bmob.v3.listener.SaveListener;
-
 /**
  * Created by Administrator on 2016/6/16 0016.
  */

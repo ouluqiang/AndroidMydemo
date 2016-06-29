@@ -12,16 +12,16 @@ public class Friend extends BmobObject {
     private User user;
     private User friendUser;
 
-    //拼音
-    private transient String pinyin;
-
-    public String getPinyin() {
-        return pinyin;
-    }
-
-    public void setPinyin(String pinyin) {
-        this.pinyin = pinyin;
-    }
+//    //拼音
+//    private transient String pinyin;
+//
+//    public String getPinyin() {
+//        return pinyin;
+//    }
+//
+//    public void setPinyin(String pinyin) {
+//        this.pinyin = pinyin;
+//    }
 
     public User getUser() {
         return user;
@@ -40,15 +40,15 @@ public class Friend extends BmobObject {
     }
 
 
-    private String name;   //显示的数据
+//    private String name;   //显示的数据
     private String sortLetters;  //显示数据拼音的首字母
-
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
     public String getSortLetters() {
         return sortLetters;
     }

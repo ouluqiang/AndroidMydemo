@@ -17,5 +17,8 @@
     <color name="color_b4">#b4b4b4</color>
     <color name="color_emote_divder">#ffa1a1a1</color>
 
-
+    <color name="color_msg_system_time_bg">#20000000</color>
+    <color name="color_chat_send_status">#818181</color>
+    <color name="color_bottom_text_normal">#9da0a4</color>
+    <color name="color_bottom_text_press">#4f9ef6</color>
 </resources>

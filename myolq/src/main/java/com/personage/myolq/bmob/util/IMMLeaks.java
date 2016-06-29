@@ -31,15 +31,14 @@ public class IMMLeaks {
     private final Method finishInputLockedMethod;
 
     ReferenceCleaner(InputMethodManager inputMethodManager, Field mHField, Field mServedViewField,
-                     Method finishInputLockedMethod) {
+        Method finishInputLockedMethod) {
       this.inputMethodManager = inputMethodManager;
       this.mHField = mHField;
       this.mServedViewField = mServedViewField;
       this.finishInputLockedMethod = finishInputLockedMethod;
     }
 
-    @Override
-    public void onGlobalFocusChanged(View oldFocus, View newFocus) {
+    @Override public void onGlobalFocusChanged(View oldFocus, View newFocus) {
       if (newFocus == null) {
         return;
       }
@@ -50,19 +49,16 @@ public class IMMLeaks {
       newFocus.addOnAttachStateChangeListener(this);
     }
 
-    @Override
-    public void onViewAttachedToWindow(View v) {
+    @Override public void onViewAttachedToWindow(View v) {
     }
 
-    @Override
-    public void onViewDetachedFromWindow(View v) {
+    @Override public void onViewDetachedFromWindow(View v) {
       v.removeOnAttachStateChangeListener(this);
       Looper.myQueue().removeIdleHandler(this);
       Looper.myQueue().addIdleHandler(this);
     }
 
-    @Override
-    public boolean queueIdle() {
+    @Override public boolean queueIdle() {
       clearInputMethodManagerLeak();
       return false;
     }
@@ -138,7 +134,7 @@ public class IMMLeaks {
    * focus, which is what happens if you press home and come back from recent apps. This replaces
    * the reference to the detached view with a reference to the decor view.
    *
-   * Should be called from {@link Activity#onCreate(android.os.Bundle)} )}.
+   * Should be called from {@link Activity#onCreate(Bundle)} )}.
    */
   public static void fixFocusedViewLeak(Application application) {
 
@@ -169,8 +165,7 @@ public class IMMLeaks {
     }
 
     application.registerActivityLifecycleCallbacks(new LifecycleCallbacksAdapter() {
-      @Override
-      public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+      @Override public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
         ReferenceCleaner cleaner =
             new ReferenceCleaner(inputMethodManager, mHField, mServedViewField,
                 finishInputLockedMethod);

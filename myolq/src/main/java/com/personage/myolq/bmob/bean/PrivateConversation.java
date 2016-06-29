@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 
 import com.personage.myolq.R;
+import com.personage.myolq.mvp.view.activity.ChatActivity;
 
 import java.util.List;
 
@@ -98,7 +99,7 @@ public class PrivateConversation extends Conversation{
     @Override
     public void onClick(Context context) {
         Intent intent = new Intent();
-//        intent.setClass(context, ChatActivity.class);
+        intent.setClass(context, ChatActivity.class);
         Bundle bundle = new Bundle();
         bundle.putSerializable("c", conversation);
         if (bundle != null) {

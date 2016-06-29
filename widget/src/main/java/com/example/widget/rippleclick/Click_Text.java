@@ -67,6 +67,18 @@ public class Click_Text extends LinearLayout{
         });
     }
 
+    public void setText(CharSequence text){
+        rippleButton.setText(text);
+    }
+
+    public void setBackgroundColor(int textbackgroud){
+        rippleButton.setBackgroundColor(textbackgroud);
+    }
+
+    public void setTextSize(float textsize){
+        rippleButton.setTextSize(textsize);
+    }
+
     public interface OnClickListener{
         public void onClick(View v);
     }

@@ -84,7 +84,7 @@ public class UserModel extends BaseModel {
      * @param pwdagain
      * @param listener
      */
-    public void register(String username, String password, String pwdagain, final LogInListener listener) {
+    public void register(String username,String password, String pwdagain, final LogInListener listener) {
         if(TextUtils.isEmpty(username)){
             listener.internalDone(new BmobException(CODE_NULL, "请填写用户名"));
             return;
@@ -122,7 +122,7 @@ public class UserModel extends BaseModel {
      * @param limit
      * @param listener
      */
-    public void queryUsers(String username, int limit, final FindListener<User> listener){
+    public void queryUsers(String username,int limit,final FindListener<User> listener){
         BmobQuery<User> query = new BmobQuery<>();
         //去掉当前用户
         try {

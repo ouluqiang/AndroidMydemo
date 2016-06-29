@@ -9,11 +9,11 @@ import cn.bmob.newim.BmobIM;
  */
 public class BmobIm {
 
-    public static void getBmobIM(Context context){
-        //NewIM初始化
-        BmobIM.init(context);
-        //注册消息接收器
-        BmobIM.registerDefaultMessageHandler(new MessageHandler(context));
-    }
+//    public static void getBmobIM(Context context){
+//        //NewIM初始化
+//        BmobIM.init(context);
+//        //注册消息接收器
+//        BmobIM.registerDefaultMessageHandler(new MessageHandler(context));
+//    }
 
 }

@@ -2,6 +2,7 @@ package com.personage.myolq.mvp.view.adapter;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.SectionIndexer;
 
 import com.example.my.mvp.adapter.listadapter.ListAdapter;
 import com.example.my.mvp.adapter.listadapter.ListHolder;
@@ -14,13 +15,13 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/6/21 0021.
  */
-public class FriendsAdapter extends ListAdapter<Friend> {
+public class FriendsAdapter extends ListAdapter<Friend> implements SectionIndexer {
 
-    public List<Friend> mDatas;
+//    public List<Friend> mDatas;
 
     public FriendsAdapter(Context context, List<Friend> mDatas) {
         super(context, mDatas);
-        this.mDatas=mDatas;
+//        this.mDatas=mDatas;
     }
 
     @Override
@@ -35,7 +36,8 @@ public class FriendsAdapter extends ListAdapter<Friend> {
         } else {
             holder.setVisibility(R.id.catalog,View.GONE);
         }
-        holder.setText(R.id.title,friend.getName());
+        holder.setText(R.id.item_nickname,friend.getFriendUser().getNickname());
+        holder.setText(R.id.item_username,friend.getFriendUser().getUsername());
 //        viewHolder.tvTitle.setText(this.list.get(position).getName());
 
     }
@@ -49,7 +51,12 @@ public class FriendsAdapter extends ListAdapter<Friend> {
      * 根据ListView的当前位置获取分类的首字母的Char ascii值
      */
     public int getSectionForPosition(int position) {
-        return mDatas.get(position).getSortLetters().charAt(0);
+        return getItem(position)==null?0:getItem(position).getSortLetters().charAt(0);
+    }
+
+    @Override
+    public Object[] getSections() {
+        return null;
     }
 
     /**
@@ -87,10 +94,17 @@ public class FriendsAdapter extends ListAdapter<Friend> {
      * 当ListView数据发生变化时,调用此方法来更新ListView
      * @param list
      */
-    public void updateListView(List<Friend> list){
-        this.mDatas = list;
-        notifyDataSetChanged();
-    }
+//    public void updateListView(List<Friend> list){
+//        this.mDatas = list;
+//        notifyDataSetChanged();
+//    }
 
+//    public void setmDatas(List<Friend> list){
+//        mDatas.clear();
+//        if(list!=null){
+//            mDatas.addAll(list);
+//        }
+//        notifyDataSetChanged();
+//    }
 
 }

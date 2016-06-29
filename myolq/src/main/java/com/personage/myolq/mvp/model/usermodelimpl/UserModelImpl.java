@@ -2,7 +2,7 @@ package com.personage.myolq.mvp.model.usermodelimpl;
 
 import android.content.Context;
 
-import com.personage.myolq.base.BmobBackCall;
+import com.personage.myolq.mvp.backcall.BmobBackCall;
 import com.personage.myolq.bmob.bean.User;
 import com.personage.myolq.mvp.model.usermodel.UserModel;
 

@@ -4,22 +4,87 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_set_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_5"
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical" >
+
+            <ImageView
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_marginLeft="10dp"
+                android:padding="@dimen/margin_3"
+                android:contentDescription="@string/action_settings"
+                android:src="@mipmap/new_friends_icon" />
+
+            <ImageView
+                android:id="@+id/iv_msg_tips"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|right"
+                android:contentDescription="@string/action_settings"
+                android:src="@mipmap/msg_tips" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25.0dip"
+            android:layout_marginRight="58.0dip"
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:text="@string/new_friend"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textSize="@dimen/sp_18"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line" >
+    </View>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:padding="@dimen/dp_5"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="个人资料"
+            android:layout_weight="1"
+            android:textSize="@dimen/sp_16"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dp_10"
             />
         <TextView
+            android:id="@+id/tv_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1234"
+            android:text=""
+            android:textSize="@dimen/sp_16"
+            android:layout_marginRight="@dimen/dp_10"
             />
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_line" >
+    </View>
     <com.example.widget.rippleclick.Click_Text
         android:id="@+id/click_exit"
         android:layout_width="match_parent"

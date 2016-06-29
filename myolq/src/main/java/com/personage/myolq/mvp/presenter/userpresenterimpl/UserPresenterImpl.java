@@ -2,15 +2,12 @@ package com.personage.myolq.mvp.presenter.userpresenterimpl;
 
 import android.content.Context;
 
-import com.example.utils.ToastUtil;
-import com.personage.myolq.base.BmobBackCall;
+import com.personage.myolq.mvp.backcall.BmobBackCall;
 import com.personage.myolq.mvp.model.usermodel.UserModel;
 import com.personage.myolq.mvp.model.usermodelimpl.UserModelImpl;
 import com.personage.myolq.mvp.presenter.userpresenter.UserPresenter;
 import com.personage.myolq.mvp.view.activity.LoginActivity;
 import com.personage.myolq.mvp.view.activity.RegisterActivity;
-
-import cn.bmob.v3.listener.SaveListener;
 
 /**
  * Created by Administrator on 2016/6/16 0016.

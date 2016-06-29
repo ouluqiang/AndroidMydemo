@@ -26,6 +26,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"/>
         <com.example.widget.CircleImageView
+            android:id="@+id/civ_avator"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"

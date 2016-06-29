@@ -29,7 +29,7 @@ public abstract class ListAdapter <T> extends BaseAdapter
 
     @Override
     public int getCount() {
-        return mDatas.size()!=0?mDatas.size():0;
+        return mDatas!=null?mDatas.size():0;
     }
 
     @Override
@@ -57,6 +57,14 @@ public abstract class ListAdapter <T> extends BaseAdapter
 
     public void addlist(List<T> t){
         mDatas.addAll(t);
+        notifyDataSetChanged();
+    }
+
+    public void setmDatas(List<T> list){
+        mDatas.clear();
+        if(list!=null){
+            mDatas.addAll(list);
+        }
         notifyDataSetChanged();
     }
 

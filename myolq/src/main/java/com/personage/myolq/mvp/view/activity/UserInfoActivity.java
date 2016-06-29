@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.widget.CircleImageView;
 import com.example.widget.rippleclick.Click_Text;
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitActivity;
@@ -29,6 +30,8 @@ import cn.bmob.v3.exception.BmobException;
 public class UserInfoActivity extends InitActivity {
 
 
+    @Bind(R.id.civ_avator)
+    CircleImageView civ_avator;
     @Bind(R.id.tv_info_username)
     TextView tvInfoUsername;
     @Bind(R.id.tv_info_nickname)
@@ -58,7 +61,7 @@ public class UserInfoActivity extends InitActivity {
         }
         //构造聊天方的用户信息:传入用户id、用户名和用户头像三个参数
         info = new BmobIMUserInfo(user.getObjectId(),user.getUsername(),user.getAvatar());
-//        ImageLoaderFactory.getLoader().loadAvator(iv_avator,user.getAvatar(),R.mipmap.head);
+        ImageLoaderFactory.getLoader().loadAvator(civ_avator,user.getAvatar(),R.mipmap.head);
         tvInfoUsername.setText(user.getUsername());
         tvInfoNickname.setText(user.getNickname());
         clickAdd.setOnClickListener(new Click_Text.OnClickListener() {

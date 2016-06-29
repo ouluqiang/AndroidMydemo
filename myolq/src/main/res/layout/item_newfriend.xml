@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    >
+
+    <com.example.widget.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/main"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
+        <TextView
+            android:id="@+id/item_username"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="账号"
+            android:textSize="18dp"
+            android:paddingLeft="20dp"
+            />
+        <TextView
+            android:id="@+id/item_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="昵称"
+            android:textSize="14dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="2dp"
+            />
+    </LinearLayout>
+    <com.example.widget.rippleclick.Click_Text
+        android:id="@+id/item_newfriend_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+    </com.example.widget.rippleclick.Click_Text>
+</LinearLayout>

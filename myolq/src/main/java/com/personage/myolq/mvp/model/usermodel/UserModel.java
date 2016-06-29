@@ -2,9 +2,7 @@ package com.personage.myolq.mvp.model.usermodel;
 
 import android.content.Context;
 
-import com.personage.myolq.base.BmobBackCall;
-
-import cn.bmob.v3.listener.SaveListener;
+import com.personage.myolq.mvp.backcall.BmobBackCall;
 
 /**
  * Created by Administrator on 2016/6/16 0016.

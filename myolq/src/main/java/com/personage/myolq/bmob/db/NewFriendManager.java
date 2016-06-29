@@ -117,7 +117,7 @@ public class NewFriendManager {
      * @param time
      * @return
      */
-    private NewFriend getNewFriend(String uid, Long time){
+    private NewFriend getNewFriend(String uid,Long time){
         NewFriendDao dao =  openReadableDb().getNewFriendDao();
         return dao.queryBuilder().where(NewFriendDao.Properties.Uid.eq(uid))
                 .where(NewFriendDao.Properties.Time.eq(time)).build().unique();

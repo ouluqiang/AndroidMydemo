@@ -16,7 +16,6 @@ public class User extends BmobUser {
     private String sex;
     private String nickname;
     private String mobile;
-//    private String email;
 
     public String getAge() {
         return age;
@@ -50,15 +49,6 @@ public class User extends BmobUser {
         this.mobile = mobile;
     }
 
-//    @Override
-//    public String getEmail() {
-//        return email;
-//    }
-//
-//    @Override
-//    public void setEmail(String email) {
-//        this.email = email;
-//    }
 
     private String avatar;
 
@@ -69,6 +59,11 @@ public class User extends BmobUser {
         setUsername(friend.getName());
         setAvatar(friend.getAvatar());
     }
+
+//    public User(String nickname){
+//        this.nickname=nickname;
+//
+//    }
 
     public String getAvatar() {
         return avatar;

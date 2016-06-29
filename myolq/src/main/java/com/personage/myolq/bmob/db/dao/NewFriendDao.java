@@ -153,7 +153,7 @@ public class NewFriendDao extends AbstractDao<NewFriend, Long> {
     }
 
     /** @inheritdoc */
-    @Override
+    @Override    
     protected boolean isEntityUpdateable() {
         return true;
     }

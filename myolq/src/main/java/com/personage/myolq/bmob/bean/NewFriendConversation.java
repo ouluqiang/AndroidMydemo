@@ -9,6 +9,7 @@ import com.personage.myolq.base.InitApplication;
 import com.personage.myolq.bmob.Config;
 import com.personage.myolq.bmob.db.NewFriend;
 import com.personage.myolq.bmob.db.NewFriendManager;
+import com.personage.myolq.mvp.view.activity.NewFriendActivity;
 
 
 /**
@@ -71,7 +72,7 @@ public class NewFriendConversation extends Conversation{
     @Override
     public void onClick(Context context) {
         Intent intent = new Intent();
-//        intent.setClass(context, NewFriendActivity.class);
+        intent.setClass(context, NewFriendActivity.class);
         context.startActivity(intent);
     }
 

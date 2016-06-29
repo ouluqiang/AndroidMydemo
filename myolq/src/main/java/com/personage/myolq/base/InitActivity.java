@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Config;
+import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
@@ -15,6 +17,7 @@ import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.Subscribe;
 
+import butterknife.ButterKnife;
 import de.greenrobot.event.EventBus;
 
 /**
@@ -25,23 +28,28 @@ public abstract class InitActivity extends BaseActivity{
     @Override
     protected void onStart() {
         super.onStart();
-        EventBus.getDefault().register(this);
+        org.greenrobot.eventbus.EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onStop() {
-        EventBus.getDefault().unregister(this);
+        org.greenrobot.eventbus.EventBus.getDefault().unregister(this);
         super.onStop();
     }
+
+
 
     @Subscribe
     public void onEvent(Boolean empty){
 
     }
 
+    protected void initView() {}
+
     protected void runOnMain(Runnable runnable) {
         runOnUiThread(runnable);
     }
+
     protected final static String NULL = "";
     private Toast toast;
     public void toast(final Object obj) {
@@ -61,7 +69,7 @@ public abstract class InitActivity extends BaseActivity{
         }
     }
 
-    public void startActivity(Class<? extends Activity> target, Bundle bundle, boolean finish) {
+    public void startActivity(Class<? extends Activity> target, Bundle bundle,boolean finish) {
         Intent intent = new Intent();
         intent.setClass(this, target);
         if (bundle != null)

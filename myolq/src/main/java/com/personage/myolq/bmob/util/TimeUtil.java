@@ -35,7 +35,7 @@ public class TimeUtil {
         return formatter.format(date);
     }
 
-    public static String getChatTime(boolean hasYear, long timesamp) {
+    public static String getChatTime(boolean hasYear,long timesamp) {
         long clearTime = timesamp;
         String result;
         SimpleDateFormat sdf = new SimpleDateFormat("dd");
@@ -60,7 +60,7 @@ public class TimeUtil {
         return result;
     }
 
-    public static String getTime(boolean hasYear, long time) {
+    public static String getTime(boolean hasYear,long time) {
         String pattern=FORMAT_DATE_TIME;
         if(!hasYear){
             pattern = FORMAT_MONTH_DAY_TIME;

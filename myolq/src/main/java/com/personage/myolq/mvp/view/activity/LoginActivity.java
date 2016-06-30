@@ -53,10 +53,10 @@ public class LoginActivity extends InitActivity implements IUiLoginView {
         });
     }
 
-    @OnClick(R.id.tv_forgetpass)
-    public void onforgetpass() {
-        startActivity(new Intent(this, HomePageActivity.class));
-    }
+//    @OnClick(R.id.tv_forgetpass)
+//    public void onforgetpass() {
+//        startActivity(new Intent(this, HomePageActivity.class));
+//    }
 
     @OnClick(R.id.tv_register)
     public void onregister() {

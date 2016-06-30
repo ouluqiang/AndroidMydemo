@@ -51,7 +51,7 @@ public class FriendsAdapter extends ListAdapter<Friend> implements SectionIndexe
      * 根据ListView的当前位置获取分类的首字母的Char ascii值
      */
     public int getSectionForPosition(int position) {
-        return getItem(position)==null?0:getItem(position).getSortLetters().charAt(0);
+        return getItem(position).getSortLetters().charAt(0);
     }
 
     @Override

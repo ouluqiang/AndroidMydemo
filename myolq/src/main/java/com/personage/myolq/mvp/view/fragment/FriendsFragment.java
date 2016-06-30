@@ -121,16 +121,11 @@ public class FriendsFragment extends InitFragment {
         if (mData == null) {
             mData = new ArrayList<>();
         }
-//        if(adapter==null){
-//            adapter = new FriendsAdapter(getActivity(), mData);
-//
-//        }
-//        sortListView.setAdapter(adapter);
-//        if(adapter==null){
-//            adapter = new FriendsAdapter(getActivity(), mData);
-//        }
-//        sortListView.setAdapter(adapter);
-
+        if (adapter == null) {
+            Collections.sort(mData, pinyinComparator);
+            adapter = new FriendsAdapter(getActivity(), mData);
+        }
+        sortListView.setAdapter(adapter);
 
         //根据输入框输入值的改变来过滤搜索
         mClearEditText.addTextChangedListener(new TextWatcher() {
@@ -226,16 +221,11 @@ public class FriendsFragment extends InitFragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 //这里要利用adapter.getItem(position)来获取当前position所对应的对象
-                Toast.makeText(getActivity(), ((Friend) adapter.getItem(position)).getFriendUser().getNickname(), Toast.LENGTH_SHORT).show();
                 Friend friend = (Friend) adapter.getItem(position);
-                L.log(adapter.getItem(position).toString());
                 User user = friend.getFriendUser();
-                L.log(user.getNickname() + "---" + user.getObjectId());
                 BmobIMUserInfo info = new BmobIMUserInfo(user.getObjectId(), user.getUsername(), user.getAvatar());
-                L.log(info.getUserId() + "--" + info.getId() + "---" + info.getName());
                 //启动一个会话，实际上就是在本地数据库的会话列表中先创建（如果没有）与该用户的会话信息，且将用户信息存储到本地的用户表中
                 BmobIMConversation c = BmobIM.getInstance().startPrivateConversation(info, null);
-                L.log(c != null ? "有" : "无");
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("c", c);
                 startActivity(ChatActivity.class, bundle);
@@ -283,16 +273,15 @@ public class FriendsFragment extends InitFragment {
             @Override
             public void onSuccess(List<Friend> list) {
                 mData = filledData(list);
-                Collections.sort(mData, pinyinComparator);
                 // 根据a-z进行排序源数据
-                if (adapter == null) {
-                    adapter = new FriendsAdapter(getActivity(), mData);
-
+//                Collections.sort(mData, pinyinComparator);
+//                if (adapter == null) {
+//                    adapter = new FriendsAdapter(getActivity(), mData);
 //                    sortListView.setAdapter(adapter);
 //                } else {
-//                    adapter.setmDatas(list);
-                }
-                sortListView.setAdapter(adapter);
+                    adapter.setmDatas(mData);
+//                }
+
 //                adapter.notifyDataSetChanged();
                 friends_swipe.setRefreshing(false);
             }

@@ -157,8 +157,8 @@ public class ChatActivity extends InitActivity implements ObseverListener,Messag
             @Override
             public boolean onItemLongClick(int position) {
                 //这里省了个懒，直接长按就删除了该消息
-                c.deleteMessage(adapter.getItem(position));
-                adapter.remove(position);
+//                c.deleteMessage(adapter.getItem(position));
+//                adapter.remove(position);
                 return true;
             }
         });

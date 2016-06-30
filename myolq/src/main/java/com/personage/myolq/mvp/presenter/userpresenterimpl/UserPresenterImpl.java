@@ -2,12 +2,15 @@ package com.personage.myolq.mvp.presenter.userpresenterimpl;
 
 import android.content.Context;
 
+import com.personage.myolq.bmob.bean.User;
 import com.personage.myolq.mvp.backcall.BmobBackCall;
 import com.personage.myolq.mvp.model.usermodel.UserModel;
 import com.personage.myolq.mvp.model.usermodelimpl.UserModelImpl;
 import com.personage.myolq.mvp.presenter.userpresenter.UserPresenter;
 import com.personage.myolq.mvp.view.activity.LoginActivity;
 import com.personage.myolq.mvp.view.activity.RegisterActivity;
+
+import cn.bmob.v3.BmobUser;
 
 /**
  * Created by Administrator on 2016/6/16 0016.
@@ -38,7 +41,7 @@ public class UserPresenterImpl implements UserPresenter {
             @Override
             public void onSuccess() {
                 loginActivity.onToast("登录成功");
-                loginActivity.onSucceed(null);
+                loginActivity.onSucceed(getCurrentUser());
             }
 
             @Override
@@ -63,5 +66,9 @@ public class UserPresenterImpl implements UserPresenter {
                 registerActivity.onToast("注册失败:"+i+"----"+s);
             }
         });
+    }
+
+    public User getCurrentUser(){
+        return BmobUser.getCurrentUser(loginActivity, User.class);
     }
 }

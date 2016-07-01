@@ -7,9 +7,10 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="10dp"
         >
 
-        <ImageView
+        <com.example.widget.CircleImageView
             android:id="@+id/iv_recent_avatar"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -28,6 +29,8 @@
             android:gravity="left|center"
             android:singleLine="true"
             android:textSize="@dimen/text_size_medium"
+            android:layout_marginLeft="18dp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -40,6 +43,7 @@
             android:layout_marginBottom="@dimen/margin_10"
             android:ellipsize="end"
             android:singleLine="true"
+            android:layout_marginLeft="18dp"
             />
 
         <TextView
@@ -54,11 +58,12 @@
             android:gravity="center"
             android:padding="0.0dip"
             android:singleLine="true"
+
             />
 
         <TextView
             android:id="@+id/tv_recent_unread"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_below="@id/tv_recent_time"
@@ -69,6 +74,7 @@
             android:paddingTop="@dimen/margin_3"
             android:paddingBottom="@dimen/margin_3"
             android:visibility="gone"
+            android:background="@drawable/list_newmessage2"
             android:textSize="13.0dip" />
     </RelativeLayout>
 

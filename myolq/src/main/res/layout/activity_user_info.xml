@@ -1,6 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:to="http://schemas.android.com/apk/res/com.personage.myolq"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -40,7 +40,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/radio_textcolor"
+        android:background="@color/color_line"
         ></View>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/radio_textcolor"
+        android:background="@color/color_line"
         ></View>
     <RelativeLayout
         android:layout_width="match_parent"
@@ -112,13 +112,13 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/radio_textcolor"
+        android:background="@color/color_line"
         ></View>
     <com.example.widget.rippleclick.Click_Text
         android:id="@+id/click_add"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        to:text="添加好友"
+        app:text="添加好友"
         android:layout_marginTop="50dp"
         android:layout_marginLeft="@dimen/text_padd"
         android:layout_marginRight="@dimen/text_padd"
@@ -127,7 +127,7 @@
         android:id="@+id/click_chat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        to:text="聊天"
+        app:text="聊天"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="@dimen/text_padd"
         android:layout_marginRight="@dimen/text_padd"

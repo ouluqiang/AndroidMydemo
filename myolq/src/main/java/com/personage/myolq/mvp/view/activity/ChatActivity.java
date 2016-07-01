@@ -34,6 +34,8 @@ import com.personage.myolq.bmob.adapter.base.OnRecyclerViewListener;
 import com.personage.myolq.bmob.util.Util;
 import com.personage.myolq.mvp.view.adapter.ChatAdapter;
 
+import org.greenrobot.eventbus.Subscribe;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -52,6 +54,7 @@ import cn.bmob.newim.bean.BmobIMVideoMessage;
 import cn.bmob.newim.core.BmobIMClient;
 import cn.bmob.newim.core.BmobRecordManager;
 import cn.bmob.newim.event.MessageEvent;
+import cn.bmob.newim.event.OfflineMessageEvent;
 import cn.bmob.newim.listener.MessageListHandler;
 import cn.bmob.newim.listener.MessageSendListener;
 import cn.bmob.newim.listener.MessagesQueryListener;
@@ -610,27 +613,27 @@ public class ChatActivity extends InitActivity implements ObseverListener,Messag
         }
     }
 
-//    /**接收到聊天消息
-//     * @param event
-//     */
-//    @Subscribe
-//    public void onEventMainThread(MessageEvent event){
-//        addMessage2Chat(event);
-//    }
-//
-//    @Subscribe
-//    public void onEventMainThread(OfflineMessageEvent event){
-//        Map<String,List<MessageEvent>> map =event.getEventMap();
-//        if(map!=null&&map.size()>0){
-//            //只获取当前聊天对象的离线消息
-//            List<MessageEvent> list = map.get(c.getConversationId());
-//            if(list!=null && list.size()>0){
-//                for (int i=0;i<list.size();i++){
-//                    addMessage2Chat(list.get(i));
-//                }
-//            }
-//        }
-//    }
+    /**接收到聊天消息
+     * @param event
+     */
+    @Subscribe
+    public void onEventMainThread(MessageEvent event){
+        addMessage2Chat(event);
+    }
+
+    @Subscribe
+    public void onEventMainThread(OfflineMessageEvent event){
+        Map<String,List<MessageEvent>> map =event.getEventMap();
+        if(map!=null&&map.size()>0){
+            //只获取当前聊天对象的离线消息
+            List<MessageEvent> list = map.get(c.getConversationId());
+            if(list!=null && list.size()>0){
+                for (int i=0;i<list.size();i++){
+                    addMessage2Chat(list.get(i));
+                }
+            }
+        }
+    }
 
     /**
      * 添加消息到聊天界面中

@@ -17,6 +17,12 @@
         android:background="?attr/colorPrimary"
         app:popupTheme="@style/AppTheme.PopupOverlay"
         >
+        <com.example.widget.CircleImageView
+            android:id="@+id/civ_avator"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@mipmap/head"
+            />
         <TextView
             android:id="@+id/top_title"
             android:layout_width="wrap_content"
@@ -33,9 +39,10 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="+"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:gravity="center"
             android:padding="10dp"
+            android:layout_marginRight="10dp"
             android:layout_gravity="right|center"
             />
     </android.support.v7.widget.Toolbar>

@@ -104,24 +104,11 @@ public class FriendsFragment extends InitFragment {
             }
         });
 
-//        sortListView.setOnItemClickListener(new OnItemClickListener() {
-//
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view,
-//                                    int position, long id) {
-//                //这里要利用adapter.getItem(position)来获取当前position所对应的对象
-//                Toast.makeText(getActivity(), ((Friend) adapter.getItem(position)).getName(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-
-//        SourceDateList = filledData(getResources().getStringArray(R.array.date));
-
-        // 根据a-z进行排序源数据
-//        Collections.sort(SourceDateList, pinyinComparator);
         if (mData == null) {
             mData = new ArrayList<>();
         }
         if (adapter == null) {
+            // 根据a-z进行排序源数据
             Collections.sort(mData, pinyinComparator);
             adapter = new FriendsAdapter(getActivity(), mData);
         }
@@ -195,10 +182,15 @@ public class FriendsFragment extends InitFragment {
         } else {
             filterDateList.clear();
             for (Friend sortModel : mData) {
-                String name = sortModel.getFriendUser().getNickname();
-                if (name.indexOf(filterStr.toString()) != -1 || characterParser.getSelling(name).startsWith(filterStr.toString())) {
+                String nickname = sortModel.getFriendUser().getNickname();
+                String username = sortModel.getFriendUser().getUsername();
+
+                if ((nickname.indexOf(filterStr.toString()) != -1 || characterParser.getSelling(nickname)
+                        .startsWith(filterStr.toString()))||(username.indexOf(filterStr.toString()) != -1 || characterParser.getSelling(username)
+                        .startsWith(filterStr.toString()))) {
                     filterDateList.add(sortModel);
                 }
+
             }
         }
 
@@ -208,10 +200,20 @@ public class FriendsFragment extends InitFragment {
     }
 
     private void setListener() {
-
+        mView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                mView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                friends_swipe.setRefreshing(true);
+                query();
+            }
+        });
         friends_swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
+                if(mClearEditText.getText().toString().trim()!=null){
+                    mClearEditText.setText("");
+                }
                 query();
             }
         });
@@ -275,14 +277,7 @@ public class FriendsFragment extends InitFragment {
                 mData = filledData(list);
                 // 根据a-z进行排序源数据
 //                Collections.sort(mData, pinyinComparator);
-//                if (adapter == null) {
-//                    adapter = new FriendsAdapter(getActivity(), mData);
-//                    sortListView.setAdapter(adapter);
-//                } else {
-                    adapter.setmDatas(mData);
-//                }
-
-//                adapter.notifyDataSetChanged();
+                adapter.setmDatas(mData);
                 friends_swipe.setRefreshing(false);
             }
 

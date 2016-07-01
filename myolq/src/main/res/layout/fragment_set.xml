@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:to="http://schemas.android.com/apk/res/com.personage.myolq"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
@@ -57,17 +57,18 @@
         android:background="@color/color_line" >
     </View>
     <LinearLayout
+        android:id="@+id/ll_set_userinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/dp_5"
+        android:padding="@dimen/dp_10"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="个人资料"
             android:layout_weight="1"
-            android:textSize="@dimen/sp_16"
+            android:textSize="@dimen/sp_20"
             android:layout_gravity="center"
             android:layout_marginLeft="@dimen/dp_10"
             />
@@ -90,8 +91,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padd"
-        to:text="退出登录"
-        to:background="@color/red"
+        app:text="退出登录"
+        app:background="@color/red"
         ></com.example.widget.rippleclick.Click_Text>
 
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.personage.myolq.mvp.view.fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.ViewTreeObserver;
 
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitFragment;
@@ -78,7 +79,14 @@ public class ConversationFragment extends InitFragment {
     }
 
     private void setListener() {
-
+        mView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                mView.getViewTreeObserver().removeGlobalOnLayoutListener(this);
+                sw_refresh.setRefreshing(true);
+                query();
+            }
+        });
         sw_refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -130,7 +138,7 @@ public class ConversationFragment extends InitFragment {
     public void query(){
 //        adapter.bindDatas(BmobIM.getInstance().loadAllConversation());
         adapter.bindDatas(getConversations());
-        adapter.notifyDataSetChanged();
+//        adapter.notifyDataSetChanged();
         sw_refresh.setRefreshing(false);
     }
 

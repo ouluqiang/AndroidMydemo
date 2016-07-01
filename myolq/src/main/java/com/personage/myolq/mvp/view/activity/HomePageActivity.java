@@ -10,6 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -18,6 +19,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.widget.CircleImageView;
 import com.orhanobut.logger.Logger;
 import com.personage.myolq.R;
 import com.personage.myolq.base.InitActivity;
@@ -30,6 +32,7 @@ import com.personage.myolq.mvp.view.fragment.ConversationFragment;
 import com.personage.myolq.mvp.view.fragment.FriendsFragment;
 import com.personage.myolq.mvp.view.fragment.SetFragment;
 
+import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import java.util.ArrayList;
@@ -48,11 +51,13 @@ import cn.bmob.newim.listener.ObseverListener;
 import cn.bmob.newim.notification.BmobNotificationManager;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.exception.BmobException;
-import de.greenrobot.event.EventBus;
 
 
 public class HomePageActivity extends InitActivity
         implements NavigationView.OnNavigationItemSelectedListener , ObseverListener {
+
+    @Bind(R.id.civ_avator)
+    CircleImageView civ_avator;
     @Bind(R.id.iv_conversation_tips)
     ImageView iv_conversation_tips;
     @Bind(R.id.iv_set_tips)
@@ -85,15 +90,18 @@ public class HomePageActivity extends InitActivity
         ButterKnife.bind(this);
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawerLayout.setDrawerListener(toggle);
-        toggle.syncState();
+
         navView.setNavigationItemSelectedListener(this);
 
         getFragmentViews();
         homeViewPager = new HomeViewPager(getSupportFragmentManager(),fragments,this);
         homePageVp.setAdapter(homeViewPager);
+        civ_avator.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawerLayout.openDrawer(Gravity.LEFT);
+            }
+        });
     }
 
     @Override
@@ -130,15 +138,18 @@ public class HomePageActivity extends InitActivity
 
     @OnClick(R.id.btn_conversation)
     public void onViewOne(){
+        topTitle.setText("会话");
         homePageVp.setCurrentItem(0);
     }
     @OnClick(R.id.btn_contact)
     public void onViewTwo(){
+        topTitle.setText("联系人");
         homePageVp.setCurrentItem(1);
     }
 
     @OnClick(R.id.btn_set)
     public void onViewThree(){
+        topTitle.setText("设置");
         homePageVp.setCurrentItem(2);
     }
 
@@ -216,12 +227,7 @@ public class HomePageActivity extends InitActivity
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.home_page, menu);
-        return true;
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

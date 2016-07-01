@@ -15,10 +15,10 @@ import android.widget.Toast;
 import com.example.my.mvp.base.BaseActivity;
 import com.orhanobut.logger.Logger;
 
+import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 
 import butterknife.ButterKnife;
-import de.greenrobot.event.EventBus;
 
 /**
  * Created by Administrator on 2016/6/16 0016.
@@ -28,12 +28,12 @@ public abstract class InitActivity extends BaseActivity{
     @Override
     protected void onStart() {
         super.onStart();
-        org.greenrobot.eventbus.EventBus.getDefault().register(this);
+        EventBus.getDefault().register(this);
     }
 
     @Override
     protected void onStop() {
-        org.greenrobot.eventbus.EventBus.getDefault().unregister(this);
+        EventBus.getDefault().unregister(this);
         super.onStop();
     }
 

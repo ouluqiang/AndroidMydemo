@@ -72,7 +72,6 @@ public class AdditionActivity extends InitActivity {
         adapter.setOnItemClickListener(new RecyclerAdapter.OnItemClickListener() {
             @Override
             public void OnItemClickListener(View view, int position) {
-                ToastUtil.show(getApplicationContext(),position+"");
                 Bundle bundle = new Bundle();
                 User user = adapter.getItem(position);
                 bundle.putSerializable("u", user);

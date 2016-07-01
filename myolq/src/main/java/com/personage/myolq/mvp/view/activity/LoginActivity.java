@@ -89,7 +89,7 @@ public class LoginActivity extends InitActivity implements IUiLoginView {
     public void onSucceed(Object object) {
         User user = (User) object;
         BmobIM.getInstance().updateUserInfo(new BmobIMUserInfo(user.getObjectId(), user.getUsername(), user.getAvatar()));
-        startActivity(MainActivity.class, null, true);
+        startActivity(HomePageActivity.class, null, true);
     }
 
     @Override

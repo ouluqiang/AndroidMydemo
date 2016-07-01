@@ -19,6 +19,7 @@ public class Top_Title extends LinearLayout {
     private TextView top_title;
     private Toolbar toolbar;
     private ImageView top_back;
+    private View mView;
 
     public Top_Title(Context context) {
         super(context);
@@ -39,12 +40,11 @@ public class Top_Title extends LinearLayout {
     }
 
     private void getView() {
-        View view = inflate(mContext, R.layout.top_title, this);
-        toolbar = (Toolbar) view.findViewById(R.id.toolbar);
+        mView = inflate(mContext, R.layout.top_title, this);
+        toolbar = (Toolbar) mView.findViewById(R.id.toolbar);
         toolbar.setTitle("");
-        top_title = (TextView) view.findViewById(R.id.top_title);
-        top_back = (ImageView) view.findViewById(R.id.top_back);
-//        view.setVisibility(View.GONE);
+        top_title = (TextView) mView.findViewById(R.id.top_title);
+        top_back = (ImageView) mView.findViewById(R.id.top_back);
 //        initTopBar(view);
     }
 
@@ -73,6 +73,11 @@ public class Top_Title extends LinearLayout {
     public void setTitle(int text) {
         top_title.setText(text);
     }
+    public void setTopView(int view) {
+        mView.setVisibility(view);
+    }
+
+
 
 //    private void initTopBar(View view) {
 //        int height= ScreenUtils.getScreenHeight(mContext);

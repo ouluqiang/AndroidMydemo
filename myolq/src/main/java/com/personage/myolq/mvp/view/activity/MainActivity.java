@@ -3,6 +3,7 @@ package com.personage.myolq.mvp.view.activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Handler;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -36,7 +37,7 @@ public class MainActivity extends InitActivity {
                     WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
         setContentView(R.layout.activity_main);
-
+        setTopView(View.GONE);
     }
 
     @Override

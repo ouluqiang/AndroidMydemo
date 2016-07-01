@@ -41,7 +41,7 @@ public class TestActivity extends BaseActivity implements IUiTestView {
     protected void setLayout() {
         setContentView(R.layout.activity_test);
         setTitle(R.string.title_activity_login);
-        loginPresenter = new TestPresenterImpl(this);
+//        loginPresenter = new TestPresenterImpl(this);
     }
 
     @Override

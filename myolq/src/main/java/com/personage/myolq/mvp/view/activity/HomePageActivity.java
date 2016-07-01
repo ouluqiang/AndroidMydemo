@@ -223,7 +223,8 @@ public class HomePageActivity extends InitActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            onExit();
+//            super.onBackPressed();
         }
     }
 

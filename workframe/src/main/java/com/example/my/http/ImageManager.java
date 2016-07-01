@@ -8,6 +8,7 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
+
 /**
  * Created by Administrator on 2016/5/16.
  */
@@ -41,7 +42,7 @@ public class ImageManager {
         ImageLoader.getInstance().displayImage(url,imageView);
     }
 
-    private DisplayImageOptions setOptions(int loading,int fail){
+    private DisplayImageOptions setOptions(int loading, int fail){
         //显示图片的配置
         DisplayImageOptions options = new DisplayImageOptions.Builder()
                 .showImageOnLoading(loading)

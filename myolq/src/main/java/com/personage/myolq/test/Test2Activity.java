@@ -37,7 +37,7 @@ public class Test2Activity extends BaseActivity implements IUiTest2View {
         setContentView(R.layout.activity_test2);
         setTitle(R.string.title_activity_register);
         setLeftOnBack();
-        iUiTest2View = new TestPresenterImpl(this);
+//        iUiTest2View = new TestPresenterImpl(this);
     }
 
     @Override

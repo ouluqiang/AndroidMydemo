@@ -13,6 +13,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
 import com.example.my.mvp.base.BaseActivity;
+import com.example.utils.ToastUtil;
 import com.orhanobut.logger.Logger;
 
 import org.greenrobot.eventbus.EventBus;
@@ -113,6 +114,16 @@ public abstract class InitActivity extends BaseActivity{
     public void log(String msg){
         if(Config.DEBUG){
             Logger.i(msg);
+        }
+    }
+    long exitTime=0;
+    public void onExit() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            ToastUtil.show(this, "再按一次退出程序");
+            exitTime = System.currentTimeMillis();
+        }else {
+            finish();
+            System.exit(0);
         }
     }
 

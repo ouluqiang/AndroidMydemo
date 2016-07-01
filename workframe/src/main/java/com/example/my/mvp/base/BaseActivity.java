@@ -133,6 +133,9 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void setTitle(int text){
         toolbarTop.setTitle(getString(text));
     }
+    public void setTopView(int view){
+        toolbarTop.setTopView(view);
+    }
 
     public void setLeftOnBack(){
         toolbarTop.setOnClickLeftBack(this);

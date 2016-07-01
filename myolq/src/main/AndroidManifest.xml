@@ -33,6 +33,7 @@
         <activity
             android:name=".mvp.view.activity.RegisterActivity"
             android:label="@string/title_activity_register"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <!-- <activity -->
@@ -48,6 +49,7 @@
         <activity
             android:name=".mvp.view.activity.LoginActivity"
             android:label="@string/title_activity_main"
+            android:launchMode="singleTask"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

@@ -26,7 +26,7 @@ public class BaseApplication extends Application {
         CrashHandler mCrashHandler = new CrashHandler(this);
         Thread.setDefaultUncaughtExceptionHandler(mCrashHandler);
         activityList = new LinkedList<Activity>();
-        ImageManager.getInstace().init(this);
+//        ImageManager.getInstace().init(this);
 
     }
 

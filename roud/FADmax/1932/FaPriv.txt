@@ -1,47 +1,47 @@
-隱私政策
+Política de Privacidade
 
-歡迎使用我們的應用程序！ 本隱私政策旨在向您解釋我們如何收集、使用和披露您的個人數據，以及您在我們的應用程序中的權利和選擇。 請仔細閱讀以下內容。
+Bem-vindo ao nosso aplicativo! Esta Política de Privacidade destina-se a explicar-lhe como recolhemos, utilizamos e divulgamos dados pessoais sobre si, bem como os seus direitos e escolhas com as nossas aplicações. Por favor, leia atentamente o seguinte conteúdo.
 
-1.收集的資訊
+1. Informações recolhidas
 
-在使用我們的應用程序時，我們可能會收集您提供的個人資訊，包括但不限於您的姓名、電子郵寄地址、聯系資訊等。此外，我們還可能通過應用程序自動收集一些非個人身份資訊，如設備資訊、作業系統版本、使用習慣等。 我們收集這些資訊的目的是改進和優化我們的應用程序，為您提供更好的用戶體驗。
+Ao usar nosso aplicativo, podemos coletar as informações pessoais que você fornecer, incluindo, mas não limitado a, seu nome, endereço de e-mail, informações de contato, etc Além disso, podemos coletar automaticamente algumas informações não pessoalmente identificáveis através do aplicativo, tais como informações do dispositivo, versão do sistema operacional, hábitos de uso, etc. Nosso objetivo de coletar essas informações é melhorar e otimizar nosso aplicativo e fornecer uma melhor experiência de usuário.
 
-2.資訊的使用
+2. Utilização da Informação
 
-我們收集的個人資訊將用於以下目的：
+As informações pessoais que coletamos serão usadas para os seguintes fins:
 
--為您提供我們的應用程序和相關服務；
+- Para lhe fornecer as nossas aplicações e serviços relacionados;
 
--處理您的請求和迴響；
+- para processar os seus pedidos e feedback;
 
--向您發送與應用程序相關的更新、通知和行銷；
+- enviar atualizações, notificações e marketing relacionados com o App;
 
--改進和優化我們的應用程序；
+- melhorar e otimizar a nossa aplicação;
 
--防止欺詐和濫用。
+- Proteção contra fraudes e abusos.
 
-3.資訊披露
+3. Divulgação de informações
 
-我們承諾不會將您的個人資訊出售、交易或出租給任何協力廠商。 但是，在以下情况下，我們可能會與協力廠商共亯您的個人資訊：
+Prometemos não vender, trocar ou alugar suas informações pessoais a terceiros. No entanto, podemos compartilhar suas informações pessoais com terceiros nas seguintes circunstâncias:
 
--在您明確同意的情况下；
+- com o seu consentimento explícito;
 
--根據法律法規的規定或者政府機構的要求；
+- De acordo com as disposições legislativas e regulamentares ou as exigências dos órgãos governamentais;
 
--保護我們的權利和財產；
+- Proteger os nossos direitos e propriedade;
 
--在商業交易中，如合併、收購或破產清算。
+- Em transações comerciais como fusões, aquisições ou liquidação de falências.
 
-我們將採取合理措施保護您的個人資訊安全，並要求與我們共亯您資訊的協力廠商也這樣做以保護您的隱私。
+Tomaremos medidas razoáveis para proteger a segurança de suas informações pessoais e exigiremos que terceiros com quem compartilhamos suas informações façam o mesmo para proteger sua privacidade.
 
-4.Cookie和類似科技
+4. Cookies e tecnologias semelhantes
 
-我們的應用程序可能會使用cookie和類似科技來收集和存儲某些資訊。 這些科技用於提供個性化的用戶體驗、分析應用程序使用情况和改進我們的服務。 您可以根據自己的喜好選擇接受或拒絕Cookie，但請注意，拒絕Cookie可能會影響您對應用程序某些功能的使用。
+Nossos aplicativos podem usar cookies e tecnologias semelhantes para coletar e armazenar determinadas informações. Essas tecnologias são usadas para fornecer uma experiência personalizada ao usuário, analisar o uso de aplicativos e melhorar nossos serviços. Você pode optar por aceitar ou rejeitar cookies de acordo com suas preferências, mas observe que recusar cookies pode afetar o uso de certas funções do aplicativo.
 
-5.年齡限制
+5. Restrições de idade
 
-我們的應用程序不針對18歲以下的兒童。 如果您是18歲以下的兒童，請不要向我們提供任何個人資訊。 如果我們發現無意中收集了18歲以下兒童的個人資訊，我們將採取合理措施儘快删除該資訊。
+Nosso aplicativo não é direcionado a crianças menores de 18 anos. Se você é uma criança menor de 18 anos, por favor, não nos forneça nenhuma informação pessoal. Se descobrirmos que coletamos inadvertidamente informações pessoais de uma criança menor de 18 anos, tomaremos medidas razoáveis para excluir essas informações o mais rápido possível.
 
-6.與協力廠商的連結
+6. Ligações a terceiros
 
-我們的應用程序可能包含指向協力廠商網站或服務的連結。 請注意，我們不對這些連結的隱私做法負責。 我們鼓勵您
+Nossos Aplicativos podem conter links para sites ou serviços de terceiros. Observe que não somos responsáveis pelas práticas de privacidade desses links. 

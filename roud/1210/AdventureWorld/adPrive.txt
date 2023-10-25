@@ -1,38 +1,71 @@
-Privacy Policy
-"Rohan uddin" built the Paragraph Collection app as a Commercial app. This SERVICE is provided by "Rohan uddin"  and is intended for use as is.
-This page is used to inform visitors regarding our policies regarding the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
-If you choose to use our Service, you agree to the collection and use of information in relation to this policy. The Personal Information that we collect is used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy.
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which are accessible at Paragraph Collection unless otherwise defined in this Privacy Policy.
-Information Collection and Use
-For a better experience, while using our Service, we may require you to provide us with certain personally identifiable information, including but not limited to Name, Email Address. The information that we request will be retained by us and used as described in this privacy policy.
-The app does use third-party services that may collect information used to identify you.
-Link to the privacy policy of third party service providers used by the app
-§   Google Play Services
-§   AdMob
-§   Google Analytics for Firebase
-Log Data
-We want to inform you that whenever you use our Service, in a case of an error in the app we collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
-Cookies
-Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
-This Service does not use these “cookies” explicitly. However, the app may use third-party code and libraries that use “cookies” to collect information and improve their services. You can either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
-Service Providers
-We may employ third-party companies and individuals due to the following reasons:
-§   To facilitate our Service;
-§   To provide the Service on our behalf;
-§   To perform Service-related services; or
-§   To assist us in analyzing how our Service is used.
-We want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
-Security
-We value your trust in providing us with your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and we cannot guarantee its absolute security.
-Links to Other Sites
-This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by us. Therefore, we strongly advise you to review the Privacy Policy of these websites. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
-Children’s Privacy
-These Services do not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. In the case we discover that a child under 13 has provided us with personal information, we immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us so that we will be able to take the necessary actions.
-In-app updates 
-We use in-app updates to provide our users with the latest features and improvements to our app. During the in-app update process, we may collect information about your device, including your device model, operating system version, and app version. This information is collected to ensure that we provide you with the correct version of the app for your device. We do not collect any personal information during the in-app update process.
-Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. We will notify you of any changes by posting the new Privacy Policy on this page.
-This policy is effective as of 2021-05-01
-Contact Us
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at
-mdpavel364319@gmail.com
+นโยบายความเป็นส่วนตัว
+
+หน้านี้ใช้เพื่อแจ้งให้ผู้เยี่ยมชมทราบถึงนโยบายของเราเกี่ยวกับการเก็บรวบรวมการใช้และการเปิดเผยข้อมูลส่วนบุคคลหากมีใครตัดสินใจที่จะใช้บริการของเรา
+
+หากคุณเลือกที่จะใช้บริการของเราคุณยินยอมที่จะรวบรวมและใช้ข้อมูลที่เกี่ยวข้องกับนโยบายนี้ ข้อมูลส่วนบุคคลที่เราเก็บรวบรวมใช้เพื่อจัดหาและปรับปรุงบริการ เราจะไม่ใช้ข้อมูลของคุณหรือแบ่งปันข้อมูลของคุณกับใครเว้นแต่จะระบุไว้ในนโยบายความเป็นส่วนตัวนี้
+
+ข้อกำหนดที่ใช้ในนโยบายความเป็นส่วนตัวนี้มีความหมายเช่นเดียวกับข้อกำหนดและเงื่อนไขของเราและสามารถเข้าถึงได้ในคอลเลกชันย่อหน้าเว้นแต่จะกำหนดไว้เป็นอย่างอื่นในนโยบายความเป็นส่วนตัวนี้
+
+การรวบรวมและการใช้ข้อมูล
+
+เพื่อประสบการณ์ที่ดีขึ้น เราอาจขอให้คุณให้ข้อมูลที่สามารถระบุตัวบุคคลบางอย่างแก่เราเมื่อใช้บริการของเรา รวมถึงแต่ไม่จำกัดเพียงชื่อ ที่อยู่อีเมล ข้อมูลที่เราร้องขอจะถูกเก็บไว้โดยเราและใช้ตามที่ระบุไว้ในนโยบายความเป็นส่วนตัวนี้
+
+แอปพลิเคชันนี้ใช้บริการของบุคคลที่สามซึ่งอาจรวบรวมข้อมูลเพื่อระบุตัวตนของคุณ
+
+นโยบายความเป็นส่วนตัวของผู้ให้บริการบุคคลที่สามที่เชื่อมโยงกับการใช้แอปพลิเคชัน
+
+§ บริการ Google Play
+
+§AdMob
+
+§ Google Analytics สำหรับ Firebase
+
+ข้อมูลบันทึก
+
+เราขอแจ้งให้คุณทราบว่าเมื่อใดก็ตามที่คุณใช้บริการของเราเราจะเก็บรวบรวมข้อมูลและข้อมูลบนโทรศัพท์ของคุณที่เรียกว่า Log Data (ผ่านผลิตภัณฑ์ของบุคคลที่สาม) ในกรณีที่มีข้อผิดพลาดในแอปพลิเคชัน ข้อมูลบันทึกนี้อาจรวมถึงที่อยู่อินเทอร์เน็ตโปรโตคอลของอุปกรณ์ของคุณ ("IP") ชื่ออุปกรณ์เวอร์ชันของระบบปฏิบัติการการกำหนดค่าของแอปพลิเคชันเมื่อใช้บริการของเราเวลาและวันที่คุณใช้บริการและสถิติอื่น ๆ
+
+Cookie
+
+คุกกี้คือไฟล์ที่มีข้อมูลจำนวนน้อยและมักใช้เป็นตัวระบุที่ไม่ซ้ำกันที่ไม่ระบุชื่อ ข้อมูลนี้จะถูกส่งไปยังเบราว์เซอร์ของคุณจากเว็บไซต์ที่คุณเยี่ยมชมและเก็บไว้ในหน่วยความจำภายในของอุปกรณ์
+
+บริการนี้ไม่ได้ใช้ "คุกกี้" เหล่านี้อย่างชัดเจน อย่างไรก็ตามแอปพลิเคชันอาจใช้รหัสของบุคคลที่สามและไลบรารีที่ใช้ "คุกกี้" เพื่อรวบรวมข้อมูลและปรับปรุงบริการ คุณสามารถยอมรับหรือปฏิเสธคุกกี้เหล่านี้และรู้ว่าเมื่อใดคุกกี้จะถูกส่งไปยังอุปกรณ์ของคุณ หากคุณเลือกที่จะปฏิเสธคุกกี้ของเราคุณอาจไม่สามารถใช้บางส่วนของบริการนี้ได้
+
+ผู้ให้บริการ
+
+เราอาจจ้าง บริษัท และบุคคลที่สามด้วยเหตุผลดังต่อไปนี้:
+
+§เพื่ออำนวยความสะดวกในการให้บริการของเรา
+
+§ให้บริการในนามของเรา
+
+§ให้บริการที่เกี่ยวข้องกับบริการ หรือ
+
+§ ช่วยเราวิเคราะห์วิธีการใช้บริการของเรา
+
+เราขอแจ้งให้ผู้ใช้บริการทราบว่าบุคคลที่สามเหล่านี้สามารถเข้าถึงข้อมูลส่วนบุคคลของคุณได้ เหตุผลก็เพื่อปฏิบัติภารกิจที่ได้รับมอบหมายให้พวกเขาในนามของเรา อย่างไรก็ตาม พวกเขามีหน้าที่ไม่เปิดเผยหรือใช้ข้อมูลเพื่อวัตถุประสงค์อื่นใด
+
+ความปลอดภัย
+
+เราให้ความสำคัญกับความไว้วางใจที่คุณให้ข้อมูลส่วนบุคคลแก่เราดังนั้นเราจึงพยายามใช้วิธีการที่เป็นที่ยอมรับในเชิงพาณิชย์เพื่อปกป้องข้อมูลส่วนบุคคลของคุณ แต่โปรดจำไว้ว่าไม่มีวิธีการส่งผ่านอินเทอร์เน็ตหรือวิธีการจัดเก็บข้อมูลอิเล็กทรอนิกส์ใด ๆ ที่ปลอดภัยและเชื่อถือได้ 100% และเราไม่สามารถรับประกันความปลอดภัยได้อย่างแน่นอน
+
+การเชื่อมโยงไปยังเว็บไซต์อื่น
+
+บริการนี้อาจมีลิงก์ไปยังเว็บไซต์อื่น หากคุณคลิกที่ลิงค์ของบุคคลที่สามคุณจะถูกนำไปยังเว็บไซต์ โปรดทราบว่าเว็บไซต์ภายนอกเหล่านี้ไม่ได้ดำเนินการโดยเรา ดังนั้นเราจึงขอแนะนำให้คุณตรวจสอบนโยบายความเป็นส่วนตัวของเว็บไซต์เหล่านี้ เราไม่มีอำนาจควบคุมและไม่รับผิดชอบต่อเนื้อหานโยบายความเป็นส่วนตัวหรือการปฏิบัติของเว็บไซต์หรือบริการของบุคคลที่สาม
+
+ความเป็นส่วนตัวของเด็ก
+
+บริการเหล่านี้ไม่ได้มีไว้สำหรับบุคคลที่มีอายุต่ำกว่า 13 ปี เราจะไม่เก็บรวบรวมข้อมูลที่สามารถระบุตัวตนของเด็กอายุต่ำกว่า 13 ปีโดยเจตนา หากพบว่ามีเด็กอายุต่ำกว่า 13 ปี ให้ข้อมูลส่วนตัวกับเรา จะดำเนินการลบออกจากเซิร์ฟเวอร์ทันที หากคุณเป็นพ่อแม่หรือผู้ปกครองและคุณทราบว่าบุตรหลานของคุณได้ให้ข้อมูลส่วนบุคคลแก่เราโปรดติดต่อเราเพื่อให้เราสามารถดำเนินการตามที่จำเป็นได้
+
+การอัปเดตในแอป
+
+เราใช้การอัปเดตในแอปเพื่อให้ผู้ใช้มีคุณสมบัติล่าสุดและการปรับปรุงแอพ ในระหว่างการอัพเดตในแอป เราอาจรวบรวมข้อมูลเกี่ยวกับอุปกรณ์ของคุณ รวมถึงรุ่นอุปกรณ์ของคุณ รุ่นระบบปฏิบัติการ และรุ่นของแอป ข้อมูลนี้ถูกเก็บรวบรวมเพื่อให้แน่ใจว่าเรามีแอปพลิเคชันเวอร์ชันที่เหมาะสมสำหรับอุปกรณ์ของคุณ เราจะไม่เก็บรวบรวมข้อมูลส่วนบุคคลใด ๆ ในระหว่างการอัปเดตในแอป
+
+การเปลี่ยนแปลงนโยบายความเป็นส่วนตัวนี้
+
+เราอาจอัปเดตนโยบายความเป็นส่วนตัวของเราเป็นครั้งคราว ดังนั้นจึงขอแนะนำให้ตรวจสอบหน้านี้อย่างสม่ำเสมอสำหรับการเปลี่ยนแปลงใด ๆ เราจะโพสต์นโยบายความเป็นส่วนตัวใหม่ในหน้านี้เพื่อแจ้งให้คุณทราบถึงการเปลี่ยนแปลงใด ๆ
+
+นโยบายนี้มีผลตั้งแต่ปี 2021-05-01
+
+ติดต่อเรา
+
+หากคุณมีคำถามหรือข้อเสนอแนะเกี่ยวกับนโยบายความเป็นส่วนตัวของเราโปรดติดต่อเรา

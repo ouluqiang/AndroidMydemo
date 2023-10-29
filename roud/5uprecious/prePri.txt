@@ -1,47 +1,43 @@
-Política de Privacidade
 
-Bem-vindo ao nosso aplicativo! Esta Política de Privacidade destina-se a explicar-lhe como recolhemos, utilizamos e divulgamos dados pessoais sobre si, bem como os seus direitos e escolhas com as nossas aplicações. Por favor, leia atentamente o seguinte conteúdo.
+We are committed to protecting your privacy
 
-1. Informações recolhidas
+We collect the minimum amount of information about you that is commensurate with providing you with a satisfactory service. 
+This policy indicates the type of processes that may result in data being collected about you. Your use of this website gives us the right to collect that information.&nbsp;
 
-Ao usar nosso aplicativo, podemos coletar as informações pessoais que você fornecer, incluindo, mas não limitado a, seu nome, endereço de e-mail, informações de contato, etc Além disso, podemos coletar automaticamente algumas informações não pessoalmente identificáveis através do aplicativo, tais como informações do dispositivo, versão do sistema operacional, hábitos de uso, etc. Nosso objetivo de coletar essas informações é melhorar e otimizar nosso aplicativo e fornecer uma melhor experiência de usuário.
+Information Collected
 
-2. Utilização da Informação
+We may collect any or all of the information that you give us depending on the type of transaction you enter into, including your name, 
+or email address, together with data about your use of the game. Other information that may be needed from time to time to process a request may also be collected as indicated on the game.
 
-As informações pessoais que coletamos serão usadas para os seguintes fins:
+We may use Ads if the app is free, this may process some of your data like : AAID, ROM version, EMUI version, Screen height, Screen width, App package name, app version, Analytics SDK name,...
 
-- Para lhe fornecer as nossas aplicações e serviços relacionados;
+Information Use
 
-- para processar os seus pedidos e feedback;
+We use the information collected primarily to process the task for which you visited the game. Data collected is held in accordance with the Data Protection Act. 
+All reasonable precautions are taken to prevent unauthorised access to this information. This safeguard may require you to provide additional forms of identity should you wish to obtain information about your account details.
 
-- enviar atualizações, notificações e marketing relacionados com o App;
+Original Developer
 
-- melhorar e otimizar a nossa aplicação;
+This game is a proprietary code created by Gradle Code, Entity (JACOB SERVICES LLC), the distribution of this code  should respect and not change this part. 
+Removing this part on the privacy is ILLEGAL, and JACOB SERVICES get all rights to report and suspend all collaboration with the distributer.
 
-- Proteção contra fraudes e abusos.
+Disclosing Information
 
-3. Divulgação de informações
+We do not disclose any personal information obtained about you from this game to third parties unless you permit us to do so by ticking the relevant boxes in registration or competition forms.
+ We may also use the information to keep in contact with you and inform you of developments associated with us. You will be given the opportunity to remove yourself from any mailing list or similar device. 
+If at any time in the future we should wish to disclose information collected on this website to any third party, it would only be with your knowledge and consent.&nbsp;
 
-Prometemos não vender, trocar ou alugar suas informações pessoais a terceiros. No entanto, podemos compartilhar suas informações pessoais com terceiros nas seguintes circunstâncias:
+We may from time to time provide information of a general nature to third parties - for example, the number of individuals visiting our game, but we will not use any information that could identify those individuals.&nbsp;
 
-- com o seu consentimento explícito;
+In addition Dummy may work with third parties for the purpose of delivering targeted behavioural advertising to the Dummy game. 
+Through the use of  anonymous information about your use of our game, will be used to provide more relevant adverts about services of interest to you.
 
-- De acordo com as disposições legislativas e regulamentares ou as exigências dos órgãos governamentais;
+Changes to this Policy
 
-- Proteger os nossos direitos e propriedade;
+Any changes to our Privacy Policy will be placed here and will supersede this version of our policy. We will take reasonable steps to draw your attention to any changes in our policy. 
+However, to be on the safe side, we suggest that you read this document each time you use the website to ensure that it still meets with your approval.
 
-- Em transações comerciais como fusões, aquisições ou liquidação de falências.
+Contacting Us
 
-Tomaremos medidas razoáveis para proteger a segurança de suas informações pessoais e exigiremos que terceiros com quem compartilhamos suas informações façam o mesmo para proteger sua privacidade.
-
-4. Cookies e tecnologias semelhantes
-
-Nossos aplicativos podem usar cookies e tecnologias semelhantes para coletar e armazenar determinadas informações. Essas tecnologias são usadas para fornecer uma experiência personalizada ao usuário, analisar o uso de aplicativos e melhorar nossos serviços. Você pode optar por aceitar ou rejeitar cookies de acordo com suas preferências, mas observe que recusar cookies pode afetar o uso de certas funções do aplicativo.
-
-5. Restrições de idade
-
-Nosso aplicativo não é direcionado a crianças menores de 18 anos. Se você é uma criança menor de 18 anos, por favor, não nos forneça nenhuma informação pessoal. Se descobrirmos que coletamos inadvertidamente informações pessoais de uma criança menor de 18 anos, tomaremos medidas razoáveis para excluir essas informações o mais rápido possível.
-
-6. Ligações a terceiros
-
-Nossos Aplicativos podem conter links para sites ou serviços de terceiros. Observe que não somos responsáveis pelas práticas de privacidade desses links. 
+If you have any questions about our Privacy Policy, or if you want to know what information we have collected about you, please email us at :
+gradlecode@outlook.com
